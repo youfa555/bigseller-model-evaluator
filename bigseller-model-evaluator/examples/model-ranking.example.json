@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "provider": "nvidia",
+  "baseUrl": "https://integrate.api.nvidia.com/v1/",
+  "task": "bigseller-title-optimization",
+  "promptVersion": "bigseller-fusion-v1-title-prompt",
+  "updatedAt": "2026-06-15T00:00:00.000Z",
+  "winner": "qwen/qwen3.5-122b-a10b",
+  "fallbacks": [
+    "deepseek-ai/deepseek-v4-pro",
+    "minimaxai/minimax-m2.7"
+  ],
+  "scoring": {
+    "titleMin": 35,
+    "titleMax": 55,
+    "finalScoreFormula": "avgQuality*0.75 + hardPassRate*15 + successRate*5 + speedScore*0.05",
+    "runtimeSelection": "runtimeEligible models are selected before slower or timeout-prone models"
+  },
+  "runtimeConstraints": {
+    "maxRuntimeLatencyMs": 6000,
+    "maxRuntimeSingleLatencyMs": 8000,
+    "minRuntimeSuccessRate": 0.8,
+    "maxTimeoutFailureRate": 0
+  },
+  "runtimeSelection": {
+    "selectedPolicy": "quality-and-runtime-eligible",
+    "eligibleCount": 3,
+    "qualityEligibleCount": 3,
+    "models": [
+      "qwen/qwen3.5-122b-a10b",
+      "deepseek-ai/deepseek-v4-pro",
+      "minimaxai/minimax-m2.7"
+    ],
+    "excludedModels": []
+  },
+  "models": [
+    {
+      "id": "qwen/qwen3.5-122b-a10b",
+      "finalScore": 96,
+      "avgQuality": 97,
+      "hardPassRate": 0.923,
+      "successRate": 1,
+      "requestFailureRate": 0,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 2200,
+      "maxLatencyMs": 3600,
+      "latencyPass": true,
+      "runtimeEligible": true,
+      "runtimeRejectionReasons": [],
+      "tested": 13,
+      "successCount": 13,
+      "requestFailureCount": 0,
+      "timeoutFailureCount": 0,
+      "skippedCount": 0
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-pro",
+      "finalScore": 92,
+      "avgQuality": 93,
+      "hardPassRate": 0.846,
+      "successRate": 1,
+      "requestFailureRate": 0,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 3100,
+      "maxLatencyMs": 5200,
+      "latencyPass": true,
+      "runtimeEligible": true,
+      "runtimeRejectionReasons": [],
+      "tested": 13,
+      "successCount": 13,
+      "requestFailureCount": 0,
+      "timeoutFailureCount": 0,
+      "skippedCount": 0
+    },
+    {
+      "id": "minimaxai/minimax-m2.7",
+      "finalScore": 88,
+      "avgQuality": 90,
+      "hardPassRate": 0.769,
+      "successRate": 1,
+      "requestFailureRate": 0,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 1800,
+      "maxLatencyMs": 2900,
+      "latencyPass": true,
+      "runtimeEligible": true,
+      "runtimeRejectionReasons": [],
+      "tested": 13,
+      "successCount": 13,
+      "requestFailureCount": 0,
+      "timeoutFailureCount": 0,
+      "skippedCount": 0
+    }
+  ],
+  "details": {}
+}

@@ -1,0 +1,18 @@
+{
+  "baseUrl": "https://integrate.api.nvidia.com/v1/",
+  "models": [
+    "qwen/qwen3.5-122b-a10b",
+    "qwen/qwen3.5-397b-a17b",
+    "qwen/qwen3-next-80b-a3b-instruct",
+    "deepseek-ai/deepseek-v4-pro",
+    "deepseek-ai/deepseek-v4-flash",
+    "minimaxai/minimax-m2.7",
+    "moonshotai/kimi-k2.6",
+    "z-ai/glm-5.1",
+    "openai/gpt-oss-120b",
+    "meta/llama-3.3-70b-instruct",
+    "mistralai/mistral-large-3-675b-instruct-2512",
+    "nvidia/nemotron-3-super-120b-a12b"
+  ]
+}
+

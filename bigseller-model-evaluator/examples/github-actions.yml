@@ -1,0 +1,59 @@
+name: BigSeller NVIDIA Model Evaluation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 2 * * 1"
+
+jobs:
+  offline-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run offline checks
+        shell: pwsh
+        run: |
+          ./bigseller-model-evaluator/scripts/run-offline-checks.ps1
+
+  evaluate:
+    needs: offline-checks
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run stable NVIDIA model evaluation
+        shell: pwsh
+        env:
+          NVIDIA_API_KEY: ${{ secrets.NVIDIA_API_KEY }}
+        run: |
+          ./bigseller-model-evaluator/scripts/run-stable-evaluation.ps1 `
+            -Rounds 3 `
+            -Retries 2 `
+            -MaxTimeoutFailureRate 0.1 `
+            -PauseSecondsBetweenRounds 60
+      - name: Validate ranking JSON
+        run: |
+          node bigseller-model-evaluator/evaluate-nvidia-models.mjs \
+            --validate-ranking bigseller-model-evaluator/out/model-ranking.json
+      - name: Validate runtime config JSON
+        run: |
+          node bigseller-model-evaluator/evaluate-nvidia-models.mjs \
+            --validate-runtime-config bigseller-model-evaluator/out/runtime-model-config.json
+      - name: Upload per-round evaluation files
+        uses: actions/upload-artifact@v4
+        with:
+          name: bigseller-stable-runs
+          path: bigseller-model-evaluator/out/stable-runs/
+          retention-days: 30
+      - name: Commit ranking
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Update stable BigSeller NVIDIA model ranking"
+          file_pattern: bigseller-model-evaluator/out/model-ranking.json bigseller-model-evaluator/out/runtime-model-config.json bigseller-model-evaluator/out/report.md bigseller-model-evaluator/out/fail-summary.json bigseller-model-evaluator/out/visual-report.html

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "provider": "nvidia",
+  "baseUrl": "https://integrate.api.nvidia.com/v1/",
+  "task": "bigseller-title-optimization",
+  "promptVersion": "bigseller-fusion-v1-title-prompt",
+  "updatedAt": "2026-06-15T00:00:00.000Z",
+  "sourceRankingUpdatedAt": "2026-06-15T00:00:00.000Z",
+  "winner": "qwen/qwen3.5-122b-a10b",
+  "fallbacks": [
+    "deepseek-ai/deepseek-v4-pro",
+    "minimaxai/minimax-m2.7"
+  ],
+  "runtimeConstraints": {
+    "maxRuntimeLatencyMs": 6000,
+    "maxRuntimeSingleLatencyMs": 8000,
+    "minRuntimeSuccessRate": 0.8,
+    "maxTimeoutFailureRate": 0
+  },
+  "runtimeSelection": {
+    "selectedPolicy": "quality-and-runtime-eligible",
+    "eligibleCount": 3,
+    "qualityEligibleCount": 3
+  },
+  "runtimeEligibleModels": [
+    "qwen/qwen3.5-122b-a10b",
+    "deepseek-ai/deepseek-v4-pro",
+    "minimaxai/minimax-m2.7"
+  ],
+  "models": [
+    "qwen/qwen3.5-122b-a10b",
+    "deepseek-ai/deepseek-v4-pro",
+    "minimaxai/minimax-m2.7"
+  ]
+}
