@@ -4,14 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-06-29T08:47:00.341Z",
-  "sourceRankingUpdatedAt": "2026-06-29T08:47:00.341Z",
-  "winner": "mistralai/ministral-14b-instruct-2512",
+  "updatedAt": "2026-07-06T08:39:24.711Z",
+  "sourceRankingUpdatedAt": "2026-07-06T08:39:24.711Z",
+  "winner": "mistralai/mistral-small-4-119b-2603",
   "fallbacks": [
-    "meta/llama-4-maverick-17b-128e-instruct",
-    "mistralai/mistral-small-4-119b-2603",
-    "google/gemma-3n-e2b-it",
-    "meta/llama-3.2-1b-instruct"
+    "meta/llama-3.1-8b-instruct",
+    "mistralai/mistral-nemotron",
+    "stockmark/stockmark-2-100b-instruct",
+    "meta/llama-3.2-3b-instruct"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -21,16 +21,12 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 21,
+    "eligibleCount": 15,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "mistralai/ministral-14b-instruct-2512",
-    "meta/llama-4-maverick-17b-128e-instruct",
     "mistralai/mistral-small-4-119b-2603",
-    "google/gemma-3n-e2b-it",
-    "meta/llama-3.2-1b-instruct",
     "meta/llama-3.1-8b-instruct",
     "mistralai/mistral-nemotron",
     "stockmark/stockmark-2-100b-instruct",
@@ -38,21 +34,19 @@
     "upstage/solar-10.7b-instruct",
     "nvidia/nemotron-mini-4b-instruct",
     "nvidia/nemotron-3-nano-30b-a3b",
-    "sarvamai/sarvam-m",
     "nvidia/ising-calibration-1-35b-a3b",
-    "nvidia/riva-translate-4b-instruct-v1.1",
-    "microsoft/phi-4-mini-instruct",
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/gliner-pii",
-    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
+    "openai/gpt-oss-120b",
     "nvidia/nvidia-nemotron-nano-9b-v2"
   ],
   "models": [
-    "mistralai/ministral-14b-instruct-2512",
-    "meta/llama-4-maverick-17b-128e-instruct",
     "mistralai/mistral-small-4-119b-2603",
-    "google/gemma-3n-e2b-it",
-    "meta/llama-3.2-1b-instruct"
+    "meta/llama-3.1-8b-instruct",
+    "mistralai/mistral-nemotron",
+    "stockmark/stockmark-2-100b-instruct",
+    "meta/llama-3.2-3b-instruct"
   ]
 }
