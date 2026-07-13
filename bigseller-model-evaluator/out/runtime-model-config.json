@@ -4,14 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-07-06T08:39:24.711Z",
-  "sourceRankingUpdatedAt": "2026-07-06T08:39:24.711Z",
-  "winner": "mistralai/mistral-small-4-119b-2603",
+  "updatedAt": "2026-07-13T07:43:03.865Z",
+  "sourceRankingUpdatedAt": "2026-07-13T07:43:03.865Z",
+  "winner": "abacusai/dracarys-llama-3.1-70b-instruct",
   "fallbacks": [
     "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "stockmark/stockmark-2-100b-instruct",
-    "meta/llama-3.2-3b-instruct"
+    "mistralai/mistral-small-4-119b-2603",
+    "upstage/solar-10.7b-instruct",
+    "nvidia/nemotron-mini-4b-instruct"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -21,32 +21,29 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 15,
+    "eligibleCount": 12,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "mistralai/mistral-small-4-119b-2603",
+    "abacusai/dracarys-llama-3.1-70b-instruct",
     "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "stockmark/stockmark-2-100b-instruct",
-    "meta/llama-3.2-3b-instruct",
+    "mistralai/mistral-small-4-119b-2603",
     "upstage/solar-10.7b-instruct",
     "nvidia/nemotron-mini-4b-instruct",
     "nvidia/nemotron-3-nano-30b-a3b",
-    "nvidia/ising-calibration-1-35b-a3b",
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "sarvamai/sarvam-m",
     "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/gliner-pii",
-    "openai/gpt-oss-20b",
     "openai/gpt-oss-120b",
+    "openai/gpt-oss-20b",
     "nvidia/nvidia-nemotron-nano-9b-v2"
   ],
   "models": [
-    "mistralai/mistral-small-4-119b-2603",
+    "abacusai/dracarys-llama-3.1-70b-instruct",
     "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "stockmark/stockmark-2-100b-instruct",
-    "meta/llama-3.2-3b-instruct"
+    "mistralai/mistral-small-4-119b-2603",
+    "upstage/solar-10.7b-instruct",
+    "nvidia/nemotron-mini-4b-instruct"
   ]
 }
