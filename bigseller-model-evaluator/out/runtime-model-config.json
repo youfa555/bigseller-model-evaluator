@@ -4,14 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-07-13T07:43:03.865Z",
-  "sourceRankingUpdatedAt": "2026-07-13T07:43:03.865Z",
-  "winner": "abacusai/dracarys-llama-3.1-70b-instruct",
+  "updatedAt": "2026-07-20T07:40:41.584Z",
+  "sourceRankingUpdatedAt": "2026-07-20T07:40:41.584Z",
+  "winner": "google/gemma-3n-e2b-it",
   "fallbacks": [
     "meta/llama-3.1-8b-instruct",
+    "mistralai/mistral-nemotron",
     "mistralai/mistral-small-4-119b-2603",
-    "upstage/solar-10.7b-instruct",
-    "nvidia/nemotron-mini-4b-instruct"
+    "meta/llama-3.2-3b-instruct"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -21,29 +21,33 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 12,
+    "eligibleCount": 16,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "abacusai/dracarys-llama-3.1-70b-instruct",
+    "google/gemma-3n-e2b-it",
     "meta/llama-3.1-8b-instruct",
+    "mistralai/mistral-nemotron",
     "mistralai/mistral-small-4-119b-2603",
+    "meta/llama-3.2-3b-instruct",
     "upstage/solar-10.7b-instruct",
+    "google/gemma-3n-e4b-it",
     "nvidia/nemotron-mini-4b-instruct",
     "nvidia/nemotron-3-nano-30b-a3b",
     "sarvamai/sarvam-m",
+    "nvidia/ising-calibration-1-35b-a3b",
     "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/gliner-pii",
-    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
-    "nvidia/nvidia-nemotron-nano-9b-v2"
+    "nvidia/nvidia-nemotron-nano-9b-v2",
+    "thinkingmachines/inkling"
   ],
   "models": [
-    "abacusai/dracarys-llama-3.1-70b-instruct",
+    "google/gemma-3n-e2b-it",
     "meta/llama-3.1-8b-instruct",
+    "mistralai/mistral-nemotron",
     "mistralai/mistral-small-4-119b-2603",
-    "upstage/solar-10.7b-instruct",
-    "nvidia/nemotron-mini-4b-instruct"
+    "meta/llama-3.2-3b-instruct"
   ]
 }
