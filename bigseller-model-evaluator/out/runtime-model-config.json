@@ -4,14 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-07-20T07:40:41.584Z",
-  "sourceRankingUpdatedAt": "2026-07-20T07:40:41.584Z",
-  "winner": "google/gemma-3n-e2b-it",
+  "updatedAt": "2026-07-27T07:04:48.840Z",
+  "sourceRankingUpdatedAt": "2026-07-27T07:04:48.840Z",
+  "winner": "meta/llama-3.1-8b-instruct",
   "fallbacks": [
-    "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "mistralai/mistral-small-4-119b-2603",
-    "meta/llama-3.2-3b-instruct"
+    "nvidia/ising-calibration-1.5-31b",
+    "meta/llama-3.2-3b-instruct",
+    "nvidia/nemotron-mini-4b-instruct",
+    "nvidia/nemotron-3-nano-30b-a3b"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -21,33 +21,26 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 16,
+    "eligibleCount": 9,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "google/gemma-3n-e2b-it",
     "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "mistralai/mistral-small-4-119b-2603",
+    "nvidia/ising-calibration-1.5-31b",
     "meta/llama-3.2-3b-instruct",
-    "upstage/solar-10.7b-instruct",
-    "google/gemma-3n-e4b-it",
     "nvidia/nemotron-mini-4b-instruct",
     "nvidia/nemotron-3-nano-30b-a3b",
-    "sarvamai/sarvam-m",
     "nvidia/ising-calibration-1-35b-a3b",
     "nvidia/riva-translate-4b-instruct-v1.1",
-    "nvidia/gliner-pii",
     "openai/gpt-oss-20b",
-    "nvidia/nvidia-nemotron-nano-9b-v2",
-    "thinkingmachines/inkling"
+    "nvidia/nvidia-nemotron-nano-9b-v2"
   ],
   "models": [
-    "google/gemma-3n-e2b-it",
     "meta/llama-3.1-8b-instruct",
-    "mistralai/mistral-nemotron",
-    "mistralai/mistral-small-4-119b-2603",
-    "meta/llama-3.2-3b-instruct"
+    "nvidia/ising-calibration-1.5-31b",
+    "meta/llama-3.2-3b-instruct",
+    "nvidia/nemotron-mini-4b-instruct",
+    "nvidia/nemotron-3-nano-30b-a3b"
   ]
 }
