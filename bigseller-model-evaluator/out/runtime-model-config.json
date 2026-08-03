@@ -4,14 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-07-27T07:04:48.840Z",
-  "sourceRankingUpdatedAt": "2026-07-27T07:04:48.840Z",
+  "updatedAt": "2026-08-03T07:12:51.382Z",
+  "sourceRankingUpdatedAt": "2026-08-03T07:12:51.382Z",
   "winner": "meta/llama-3.1-8b-instruct",
   "fallbacks": [
-    "nvidia/ising-calibration-1.5-31b",
-    "meta/llama-3.2-3b-instruct",
     "nvidia/nemotron-mini-4b-instruct",
-    "nvidia/nemotron-3-nano-30b-a3b"
+    "nvidia/nemotron-3-nano-30b-a3b",
+    "nvidia/riva-translate-4b-instruct-v1.1",
+    "nvidia/riva-translate-4b-instruct-v2"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -21,26 +21,25 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 9,
+    "eligibleCount": 8,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
     "meta/llama-3.1-8b-instruct",
-    "nvidia/ising-calibration-1.5-31b",
-    "meta/llama-3.2-3b-instruct",
     "nvidia/nemotron-mini-4b-instruct",
     "nvidia/nemotron-3-nano-30b-a3b",
-    "nvidia/ising-calibration-1-35b-a3b",
     "nvidia/riva-translate-4b-instruct-v1.1",
+    "nvidia/riva-translate-4b-instruct-v2",
+    "openai/gpt-oss-120b",
     "openai/gpt-oss-20b",
     "nvidia/nvidia-nemotron-nano-9b-v2"
   ],
   "models": [
     "meta/llama-3.1-8b-instruct",
-    "nvidia/ising-calibration-1.5-31b",
-    "meta/llama-3.2-3b-instruct",
     "nvidia/nemotron-mini-4b-instruct",
-    "nvidia/nemotron-3-nano-30b-a3b"
+    "nvidia/nemotron-3-nano-30b-a3b",
+    "nvidia/riva-translate-4b-instruct-v1.1",
+    "nvidia/riva-translate-4b-instruct-v2"
   ]
 }
