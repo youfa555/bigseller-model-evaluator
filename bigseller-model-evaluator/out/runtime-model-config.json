@@ -4,8 +4,8 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-08-17T04:21:52.662Z",
-  "sourceRankingUpdatedAt": "2026-08-17T04:21:52.662Z",
+  "updatedAt": "2026-08-24T04:21:04.156Z",
+  "sourceRankingUpdatedAt": "2026-08-24T04:21:04.156Z",
   "winner": "nvidia/ising-calibration-1.5-31b",
   "fallbacks": [
     "meta/llama-3.1-8b-instruct",
@@ -32,7 +32,7 @@
     "nvidia/nemotron-3-super-120b-a12b",
     "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/riva-translate-4b-instruct-v2",
-    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "meta/muse-glimmer-30b",
     "nvidia/nvidia-nemotron-nano-9b-v2",
     "openai/gpt-oss-20b"
   ],
