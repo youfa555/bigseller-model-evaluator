@@ -2,75 +2,29 @@
   "schemaVersion": 1,
   "provider": "nvidia",
   "task": "bigseller-title-optimization",
-  "updatedAt": "2026-08-31T09:02:26.963Z",
-  "winner": "nvidia/nemotron-3-nano-30b-a3b",
+  "updatedAt": "2026-09-07T07:58:24.722Z",
+  "winner": "nvidia/riva-translate-4b-instruct-v1.1",
   "aggregation": {
     "runCount": 3,
     "sourceFiles": [
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-1-20260831-080433-model-ranking.json",
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-2-20260831-082224-model-ranking.json",
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-3-20260831-084154-model-ranking.json"
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-1-20260907-065823-model-ranking.json",
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-2-20260907-071651-model-ranking.json",
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-3-20260907-073825-model-ranking.json"
     ],
     "minStableRuntimeEligibleRate": 0.5,
     "sourceUpdatedAt": [
-      "2026-08-31T08:21:24.695Z",
-      "2026-08-31T08:40:54.806Z",
-      "2026-08-31T09:02:26.860Z"
+      "2026-09-07T07:15:51.453Z",
+      "2026-09-07T07:37:25.506Z",
+      "2026-09-07T07:58:24.641Z"
     ]
   },
   "totals": {
-    "models": 54,
-    "runtimeEligibleModels": 5,
-    "requestFailures": 417,
-    "timeoutFailures": 75
+    "models": 52,
+    "runtimeEligibleModels": 3,
+    "requestFailures": 435,
+    "timeoutFailures": 93
   },
   "models": [
-    {
-      "id": "nvidia/nemotron-3-nano-30b-a3b",
-      "finalScore": 31,
-      "avgQuality": 23,
-      "hardPassRate": 0,
-      "successRate": 1,
-      "runtimeEligibleRate": 1,
-      "runtimeEligible": true,
-      "runtimeRejectionReasons": [],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 28,
-          "avgQuality": 24,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1209,
-          "maxLatencyMs": 1887,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 27,
-          "avgQuality": 22,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1395,
-          "maxLatencyMs": 2666,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 26,
-          "avgQuality": 22,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1180,
-          "maxLatencyMs": 2382,
-          "runtimeEligible": true
-        }
-      ]
-    },
     {
       "id": "nvidia/riva-translate-4b-instruct-v1.1",
       "finalScore": 20,
@@ -84,35 +38,35 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 17,
           "avgQuality": 9,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1295,
-          "maxLatencyMs": 1659,
+          "avgLatencyMs": 1227,
+          "maxLatencyMs": 1601,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 17,
           "avgQuality": 9,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1188,
-          "maxLatencyMs": 1663,
+          "avgLatencyMs": 1148,
+          "maxLatencyMs": 1595,
           "runtimeEligible": true
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 16,
-          "avgQuality": 8,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 17,
+          "avgQuality": 9,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1284,
-          "maxLatencyMs": 1658,
+          "avgLatencyMs": 1272,
+          "maxLatencyMs": 1597,
           "runtimeEligible": true
         }
       ]
@@ -130,87 +84,41 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 14,
           "avgQuality": 5,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 685,
-          "maxLatencyMs": 750,
+          "avgLatencyMs": 733,
+          "maxLatencyMs": 846,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 13,
-          "avgQuality": 4,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 779,
-          "maxLatencyMs": 1050,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 14,
           "avgQuality": 5,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 785,
-          "maxLatencyMs": 1027,
+          "avgLatencyMs": 643,
+          "maxLatencyMs": 740,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 14,
+          "avgQuality": 5,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 670,
+          "maxLatencyMs": 841,
           "runtimeEligible": true
         }
       ]
     },
     {
-      "id": "openai/gpt-oss-120b",
-      "finalScore": 14,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.974,
-      "runtimeEligibleRate": 1,
-      "runtimeEligible": true,
-      "runtimeRejectionReasons": [],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 9,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.923,
-          "avgLatencyMs": 1697,
-          "maxLatencyMs": 4518,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 10,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1676,
-          "maxLatencyMs": 2819,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 10,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1896,
-          "maxLatencyMs": 3437,
-          "runtimeEligible": true
-        }
-      ]
-    },
-    {
-      "id": "openai/gpt-oss-20b",
+      "id": "meta/muse-glimmer-30b",
       "finalScore": 14,
       "avgQuality": 0,
       "hardPassRate": 0,
@@ -222,128 +130,126 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 5206,
-          "maxLatencyMs": 7412,
+          "avgLatencyMs": 1696,
+          "maxLatencyMs": 6515,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 5615,
-          "maxLatencyMs": 7008,
+          "avgLatencyMs": 1078,
+          "maxLatencyMs": 4004,
           "runtimeEligible": true
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 5551,
-          "maxLatencyMs": 7548,
+          "avgLatencyMs": 757,
+          "maxLatencyMs": 1757,
           "runtimeEligible": true
         }
       ]
     },
     {
-      "id": "nvidia/ising-calibration-1.5-31b",
+      "id": "poolside/laguna-xs-2.1",
       "finalScore": 51,
-      "avgQuality": 55,
+      "avgQuality": 57,
       "hardPassRate": 0,
-      "successRate": 1,
+      "successRate": 0.641,
       "runtimeEligibleRate": 0.667,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "max latency 12851ms > 8000ms"
+        "success rate 0.641 < 0.8"
       ],
       "appearances": 3,
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 52,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 53,
           "avgQuality": 57,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1029,
-          "maxLatencyMs": 2280,
+          "avgLatencyMs": 747,
+          "maxLatencyMs": 1675,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 51,
-          "avgQuality": 55,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 52,
+          "avgQuality": 56,
           "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 842,
-          "maxLatencyMs": 1844,
+          "successRate": 0.923,
+          "avgLatencyMs": 996,
+          "maxLatencyMs": 2837,
           "runtimeEligible": true
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 51,
-          "avgQuality": 54,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 0,
+          "avgQuality": 0,
           "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1748,
-          "maxLatencyMs": 12851,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
           "runtimeEligible": false
         }
       ]
     },
     {
       "id": "minimaxai/minimax-m3",
-      "finalScore": 48,
-      "avgQuality": 63,
+      "finalScore": 51,
+      "avgQuality": 66,
       "hardPassRate": 0,
-      "successRate": 0.103,
+      "successRate": 0.231,
       "runtimeEligibleRate": 0,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "avg latency 7814ms > 6000ms",
-        "max latency 12170ms > 8000ms",
-        "success rate 0.103 < 0.8",
+        "success rate 0.231 < 0.8",
         "runtime eligible rate 0.000 < 0.5"
       ],
       "appearances": 3,
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 52,
-          "avgQuality": 63,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 57,
+          "avgQuality": 66,
           "hardPassRate": 0,
-          "successRate": 0.154,
-          "avgLatencyMs": 5526,
-          "maxLatencyMs": 6306,
+          "successRate": 0.692,
+          "avgLatencyMs": 4211,
+          "maxLatencyMs": 7058,
           "runtimeEligible": false
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 50,
-          "avgQuality": 62,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 0,
+          "avgQuality": 0,
           "hardPassRate": 0,
-          "successRate": 0.154,
-          "avgLatencyMs": 10102,
-          "maxLatencyMs": 12170,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
           "runtimeEligible": false
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -355,266 +261,66 @@
       ]
     },
     {
-      "id": "poolside/laguna-xs-2.1",
-      "finalScore": 46,
-      "avgQuality": 54,
+      "id": "nvidia/ising-calibration-1.5-31b",
+      "finalScore": 50,
+      "avgQuality": 57,
       "hardPassRate": 0,
-      "successRate": 0.538,
+      "successRate": 0.949,
       "runtimeEligibleRate": 0.333,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "success rate 0.538 < 0.8",
-        "timeout failure rate 0.128 > 0.1",
+        "max latency 13836ms > 8000ms",
         "runtime eligible rate 0.333 < 0.5"
       ],
       "appearances": 3,
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 49,
-          "avgQuality": 53,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 47,
+          "avgQuality": 52,
           "hardPassRate": 0,
           "successRate": 0.846,
-          "avgLatencyMs": 651,
-          "maxLatencyMs": 1207,
+          "avgLatencyMs": 3423,
+          "maxLatencyMs": 13836,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 55,
+          "avgQuality": 60,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 3559,
+          "maxLatencyMs": 13390,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 54,
+          "avgQuality": 59,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 767,
+          "maxLatencyMs": 1432,
           "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 49,
-          "avgQuality": 54,
-          "hardPassRate": 0,
-          "successRate": 0.769,
-          "avgLatencyMs": 1210,
-          "maxLatencyMs": 6069,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-3-super-120b-a12b",
-      "finalScore": 18,
-      "avgQuality": 15,
-      "hardPassRate": 0,
-      "successRate": 1,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "max latency 9700ms > 8000ms",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 21,
-          "avgQuality": 16,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 5051,
-          "maxLatencyMs": 9341,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 18,
-          "avgQuality": 12,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 4140,
-          "maxLatencyMs": 9700,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 21,
-          "avgQuality": 16,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 3489,
-          "maxLatencyMs": 8019,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b",
-      "finalScore": 17,
-      "avgQuality": 15,
-      "hardPassRate": 0,
-      "successRate": 0.923,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "max latency 13710ms > 8000ms",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 20,
-          "avgQuality": 16,
-          "hardPassRate": 0,
-          "successRate": 0.846,
-          "avgLatencyMs": 6087,
-          "maxLatencyMs": 10916,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 19,
-          "avgQuality": 14,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 6093,
-          "maxLatencyMs": 13710,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 19,
-          "avgQuality": 14,
-          "hardPassRate": 0,
-          "successRate": 0.923,
-          "avgLatencyMs": 5447,
-          "maxLatencyMs": 8360,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "finalScore": 12,
-      "avgQuality": 7,
-      "hardPassRate": 0,
-      "successRate": 0.923,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "max latency 13213ms > 8000ms",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 15,
-          "avgQuality": 9,
-          "hardPassRate": 0,
-          "successRate": 0.923,
-          "avgLatencyMs": 4122,
-          "maxLatencyMs": 10126,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 14,
-          "avgQuality": 7,
-          "hardPassRate": 0,
-          "successRate": 0.923,
-          "avgLatencyMs": 4180,
-          "maxLatencyMs": 9477,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 12,
-          "avgQuality": 5,
-          "hardPassRate": 0,
-          "successRate": 0.923,
-          "avgLatencyMs": 5957,
-          "maxLatencyMs": 13213,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "meta/muse-glimmer-30b",
-      "finalScore": 4,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.41,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 13791ms > 6000ms",
-        "max latency 14927ms > 8000ms",
-        "success rate 0.410 < 0.8",
-        "timeout failure rate 0.359 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 2,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.077,
-          "avgLatencyMs": 14927,
-          "maxLatencyMs": 14927,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 5,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.615,
-          "avgLatencyMs": 13964,
-          "maxLatencyMs": 14857,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 5,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.538,
-          "avgLatencyMs": 12481,
-          "maxLatencyMs": 14523,
-          "runtimeEligible": false
         }
       ]
     },
     {
       "id": "deepseek-ai/deepseek-v4-pro-0813",
-      "finalScore": 2,
-      "avgQuality": 0,
+      "finalScore": 47,
+      "avgQuality": 58,
       "hardPassRate": 0,
-      "successRate": 0,
+      "successRate": 0.667,
       "runtimeEligibleRate": 0,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "avg latency 0ms > 6000ms",
-        "max latency 0ms > 8000ms",
-        "success rate 0.000 < 0.8",
+        "avg latency 6923ms > 6000ms",
+        "max latency 14647ms > 8000ms",
+        "success rate 0.667 < 0.8",
         "timeout failure rate 0.231 > 0.1",
         "runtime eligible rate 0.000 < 0.5"
       ],
@@ -622,18 +328,69 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 0,
-          "avgQuality": 0,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 53,
+          "avgQuality": 64,
           "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
+          "successRate": 0.385,
+          "avgLatencyMs": 6613,
+          "maxLatencyMs": 14647,
           "runtimeEligible": false
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 48,
+          "avgQuality": 55,
+          "hardPassRate": 0,
+          "successRate": 0.769,
+          "avgLatencyMs": 8409,
+          "maxLatencyMs": 14035,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 50,
+          "avgQuality": 55,
+          "hardPassRate": 0,
+          "successRate": 0.846,
+          "avgLatencyMs": 5746,
+          "maxLatencyMs": 10392,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "mistralai/mistral-nemotron",
+      "finalScore": 43,
+      "avgQuality": 53,
+      "hardPassRate": 0,
+      "successRate": 0.513,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "max latency 9749ms > 8000ms",
+        "success rate 0.513 < 0.8",
+        "timeout failure rate 0.103 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 47,
+          "avgQuality": 53,
+          "hardPassRate": 0,
+          "successRate": 0.538,
+          "avgLatencyMs": 3500,
+          "maxLatencyMs": 9749,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -644,13 +401,322 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 49,
+          "avgQuality": 53,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 3122,
+          "maxLatencyMs": 8037,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "finalScore": 22,
+      "avgQuality": 28,
+      "hardPassRate": 0,
+      "successRate": 0.026,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 13925ms > 6000ms",
+        "max latency 13925ms > 8000ms",
+        "success rate 0.026 < 0.8",
+        "timeout failure rate 0.282 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 0,
           "avgLatencyMs": 0,
           "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 23,
+          "avgQuality": 28,
+          "hardPassRate": 0,
+          "successRate": 0.077,
+          "avgLatencyMs": 13925,
+          "maxLatencyMs": 13925,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-super-120b-a12b",
+      "finalScore": 20,
+      "avgQuality": 15,
+      "hardPassRate": 0,
+      "successRate": 0.923,
+      "runtimeEligibleRate": 0.333,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "max latency 11283ms > 8000ms",
+        "runtime eligible rate 0.333 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 19,
+          "avgQuality": 14,
+          "hardPassRate": 0,
+          "successRate": 0.846,
+          "avgLatencyMs": 3864,
+          "maxLatencyMs": 7994,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 19,
+          "avgQuality": 13,
+          "hardPassRate": 0,
+          "successRate": 0.923,
+          "avgLatencyMs": 3472,
+          "maxLatencyMs": 9786,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 22,
+          "avgQuality": 17,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 3905,
+          "maxLatencyMs": 11283,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "finalScore": 11,
+      "avgQuality": 10,
+      "hardPassRate": 0,
+      "successRate": 0.308,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 9010ms > 6000ms",
+        "max latency 14069ms > 8000ms",
+        "success rate 0.308 < 0.8",
+        "timeout failure rate 0.308 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 12,
+          "avgQuality": 7,
+          "hardPassRate": 0,
+          "successRate": 0.692,
+          "avgLatencyMs": 7804,
+          "maxLatencyMs": 14069,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 13,
+          "avgQuality": 12,
+          "hardPassRate": 0,
+          "successRate": 0.231,
+          "avgLatencyMs": 10216,
+          "maxLatencyMs": 12381,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k3",
+      "finalScore": 6,
+      "avgQuality": 3,
+      "hardPassRate": 0,
+      "successRate": 0.282,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 7581ms > 6000ms",
+        "max latency 13992ms > 8000ms",
+        "success rate 0.282 < 0.8",
+        "timeout failure rate 0.282 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 4,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.077,
+          "avgLatencyMs": 7028,
+          "maxLatencyMs": 7028,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 4,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.077,
+          "avgLatencyMs": 5260,
+          "maxLatencyMs": 5260,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 12,
+          "avgQuality": 8,
+          "hardPassRate": 0,
+          "successRate": 0.692,
+          "avgLatencyMs": 10454,
+          "maxLatencyMs": 13992,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "deepseek-ai/deepseek-v4-flash-0731",
+      "finalScore": 6,
+      "avgQuality": 3,
+      "hardPassRate": 0,
+      "successRate": 0.282,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 10466ms > 6000ms",
+        "max latency 14528ms > 8000ms",
+        "success rate 0.282 < 0.8",
+        "timeout failure rate 0.308 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 3,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.154,
+          "avgLatencyMs": 10470,
+          "maxLatencyMs": 11223,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 10,
+          "avgQuality": 5,
+          "hardPassRate": 0,
+          "successRate": 0.692,
+          "avgLatencyMs": 10462,
+          "maxLatencyMs": 14528,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "openai/gpt-oss-20b",
+      "finalScore": 5,
+      "avgQuality": 0,
+      "hardPassRate": 0,
+      "successRate": 0.667,
+      "runtimeEligibleRate": 0,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 7886ms > 6000ms",
+        "max latency 13368ms > 8000ms",
+        "success rate 0.667 < 0.8",
+        "timeout failure rate 0.333 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "appearances": 3,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
+          "finalScore": 8,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.846,
+          "avgLatencyMs": 7262,
+          "maxLatencyMs": 13368,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
+          "finalScore": 6,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.615,
+          "avgLatencyMs": 10283,
+          "maxLatencyMs": 12573,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
+          "finalScore": 6,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.538,
+          "avgLatencyMs": 6112,
+          "maxLatencyMs": 8842,
           "runtimeEligible": false
         }
       ]
@@ -673,7 +739,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -684,7 +750,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -695,7 +761,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -724,7 +790,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -735,7 +801,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -746,7 +812,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -775,7 +841,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -786,7 +852,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -797,7 +863,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -826,7 +892,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -837,7 +903,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -848,7 +914,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -877,7 +943,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -888,7 +954,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -899,7 +965,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -928,7 +994,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -939,7 +1005,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -950,59 +1016,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "mistralai/mistral-nemotron",
-      "finalScore": 2,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 0ms > 6000ms",
-        "max latency 0ms > 8000ms",
-        "success rate 0.000 < 0.8",
-        "timeout failure rate 0.205 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1031,7 +1045,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1042,7 +1056,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1053,7 +1067,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1083,7 +1097,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1094,7 +1108,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1105,7 +1119,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1134,7 +1148,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1145,7 +1159,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1156,7 +1170,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1185,7 +1199,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1196,7 +1210,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1207,7 +1221,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1236,7 +1250,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1247,7 +1261,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1258,7 +1272,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1287,7 +1301,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1298,7 +1312,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1309,7 +1323,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1338,7 +1352,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1349,7 +1363,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1360,7 +1374,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1389,7 +1403,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1400,7 +1414,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1411,7 +1425,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1440,7 +1454,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1451,7 +1465,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1462,7 +1476,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1491,7 +1505,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1502,7 +1516,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1513,7 +1527,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1542,7 +1556,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1553,7 +1567,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1564,7 +1578,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1593,7 +1607,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1604,7 +1618,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1615,7 +1629,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1644,7 +1658,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1655,7 +1669,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1666,7 +1680,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1695,7 +1709,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1706,7 +1720,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1717,7 +1731,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1746,7 +1760,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1757,7 +1771,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1768,7 +1782,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1798,7 +1812,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1809,7 +1823,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1820,7 +1834,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1849,7 +1863,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1860,7 +1874,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1871,7 +1885,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1900,7 +1914,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1911,7 +1925,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1922,7 +1936,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1951,7 +1965,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1962,7 +1976,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1973,7 +1987,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2002,7 +2016,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2013,7 +2027,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2024,7 +2038,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2053,7 +2067,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2064,7 +2078,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2075,7 +2089,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2104,7 +2118,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2115,7 +2129,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2126,7 +2140,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2155,7 +2169,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2166,7 +2180,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2177,7 +2191,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2206,7 +2220,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2217,7 +2231,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2228,7 +2242,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2257,7 +2271,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2268,7 +2282,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2279,7 +2293,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2308,7 +2322,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2319,7 +2333,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2330,7 +2344,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2359,7 +2373,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2370,7 +2384,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2381,7 +2395,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2410,7 +2424,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2421,7 +2435,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2432,7 +2446,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2461,7 +2475,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2472,7 +2486,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2483,7 +2497,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2512,7 +2526,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2523,7 +2537,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2534,7 +2548,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2563,7 +2577,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2574,7 +2588,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2585,7 +2599,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2614,7 +2628,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
+          "sourceUpdatedAt": "2026-09-07T07:15:51.453Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2625,7 +2639,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
+          "sourceUpdatedAt": "2026-09-07T07:37:25.506Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -2636,117 +2650,13 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
+          "sourceUpdatedAt": "2026-09-07T07:58:24.641Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 0,
           "avgLatencyMs": 0,
           "maxLatencyMs": 0,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "moonshotai/kimi-k3",
-      "finalScore": 2,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.026,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 8329ms > 6000ms",
-        "max latency 8329ms > 8000ms",
-        "success rate 0.026 < 0.8",
-        "timeout failure rate 0.128 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 3,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.077,
-          "avgLatencyMs": 8329,
-          "maxLatencyMs": 8329,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "deepseek-ai/deepseek-v4-flash-0731",
-      "finalScore": 2,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.026,
-      "runtimeEligibleRate": 0,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 10902ms > 6000ms",
-        "max latency 10902ms > 8000ms",
-        "success rate 0.026 < 0.8",
-        "timeout failure rate 0.256 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "appearances": 3,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-08-31T08:21:24.695Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-08-31T08:40:54.806Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-08-31T09:02:26.860Z",
-          "finalScore": 3,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.077,
-          "avgLatencyMs": 10902,
-          "maxLatencyMs": 10902,
           "runtimeEligible": false
         }
       ]
