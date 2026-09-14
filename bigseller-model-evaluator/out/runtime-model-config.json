@@ -4,12 +4,13 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-09-07T07:58:24.722Z",
-  "sourceRankingUpdatedAt": "2026-09-07T07:58:24.722Z",
-  "winner": "nvidia/riva-translate-4b-instruct-v1.1",
+  "updatedAt": "2026-09-14T08:25:28.624Z",
+  "sourceRankingUpdatedAt": "2026-09-14T08:25:28.624Z",
+  "winner": "nvidia/ising-calibration-1.5-31b",
   "fallbacks": [
+    "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/riva-translate-4b-instruct-v2",
-    "meta/muse-glimmer-30b"
+    "nvidia/nemotron-parse-2.0"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -19,18 +20,20 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 3,
+    "eligibleCount": 4,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
+    "nvidia/ising-calibration-1.5-31b",
     "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/riva-translate-4b-instruct-v2",
-    "meta/muse-glimmer-30b"
+    "nvidia/nemotron-parse-2.0"
   ],
   "models": [
+    "nvidia/ising-calibration-1.5-31b",
     "nvidia/riva-translate-4b-instruct-v1.1",
     "nvidia/riva-translate-4b-instruct-v2",
-    "meta/muse-glimmer-30b"
+    "nvidia/nemotron-parse-2.0"
   ]
 }
