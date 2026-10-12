@@ -4,11 +4,13 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-10-05T09:02:55.399Z",
-  "sourceRankingUpdatedAt": "2026-10-05T09:02:55.399Z",
+  "updatedAt": "2026-10-12T09:22:44.996Z",
+  "sourceRankingUpdatedAt": "2026-10-12T09:22:44.996Z",
   "winner": "nvidia/ising-calibration-1.5-31b",
   "fallbacks": [
-    "nvidia/nemotron-parse-2.0"
+    "nvidia/nemotron-parse-2.0",
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "nvidia/nemotron-3-super-120b-a12b"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -18,16 +20,20 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 2,
+    "eligibleCount": 4,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
     "nvidia/ising-calibration-1.5-31b",
-    "nvidia/nemotron-parse-2.0"
+    "nvidia/nemotron-parse-2.0",
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "nvidia/nemotron-3-super-120b-a12b"
   ],
   "models": [
     "nvidia/ising-calibration-1.5-31b",
-    "nvidia/nemotron-parse-2.0"
+    "nvidia/nemotron-parse-2.0",
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "nvidia/nemotron-3-super-120b-a12b"
   ]
 }
