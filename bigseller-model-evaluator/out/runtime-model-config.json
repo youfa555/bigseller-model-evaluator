@@ -4,10 +4,15 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-10-19T08:11:17.379Z",
-  "sourceRankingUpdatedAt": "2026-10-19T08:11:17.379Z",
-  "winner": "nvidia/nemotron-parse-2.0",
-  "fallbacks": [],
+  "updatedAt": "2026-10-26T08:13:50.690Z",
+  "sourceRankingUpdatedAt": "2026-10-26T08:13:50.690Z",
+  "winner": "nvidia/ising-calibration-1.5-31b",
+  "fallbacks": [
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
+    "meta/muse-glimmer-30b",
+    "openai/gpt-oss-20b"
+  ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
     "maxRuntimeSingleLatencyMs": 8000,
@@ -16,14 +21,22 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 1,
+    "eligibleCount": 5,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "nvidia/nemotron-parse-2.0"
+    "nvidia/ising-calibration-1.5-31b",
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
+    "meta/muse-glimmer-30b",
+    "openai/gpt-oss-20b"
   ],
   "models": [
-    "nvidia/nemotron-parse-2.0"
+    "nvidia/ising-calibration-1.5-31b",
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
+    "meta/muse-glimmer-30b",
+    "openai/gpt-oss-20b"
   ]
 }
