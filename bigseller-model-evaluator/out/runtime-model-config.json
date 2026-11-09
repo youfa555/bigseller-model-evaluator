@@ -4,13 +4,14 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-11-02T09:44:13.973Z",
-  "sourceRankingUpdatedAt": "2026-11-02T09:44:13.973Z",
-  "winner": "nvidia/nemotron-3.5-bolt-e4b",
+  "updatedAt": "2026-11-09T09:50:45.389Z",
+  "sourceRankingUpdatedAt": "2026-11-09T09:50:45.389Z",
+  "winner": "poolside/laguna-xs-2.1",
   "fallbacks": [
-    "poolside/laguna-xs-2.1",
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
     "nvidia/riva-translate-4b-instruct-v2",
-    "nvidia/nemotron-3.5-lightning-30b-a3b"
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
   ],
   "runtimeConstraints": {
     "maxRuntimeLatencyMs": 6000,
@@ -20,20 +21,24 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 4,
+    "eligibleCount": 7,
     "qualityEligibleCount": 0,
     "stableRunCount": 3
   },
   "runtimeEligibleModels": [
-    "nvidia/nemotron-3.5-bolt-e4b",
     "poolside/laguna-xs-2.1",
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
     "nvidia/riva-translate-4b-instruct-v2",
-    "nvidia/nemotron-3.5-lightning-30b-a3b"
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "meta/muse-glimmer-30b"
   ],
   "models": [
-    "nvidia/nemotron-3.5-bolt-e4b",
     "poolside/laguna-xs-2.1",
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-parse-2.0",
     "nvidia/riva-translate-4b-instruct-v2",
-    "nvidia/nemotron-3.5-lightning-30b-a3b"
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
   ]
 }
