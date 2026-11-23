@@ -4,13 +4,12 @@
   "baseUrl": "https://integrate.api.nvidia.com/v1/",
   "task": "bigseller-title-optimization",
   "promptVersion": "bigseller-fusion-v1-title-prompt",
-  "updatedAt": "2026-11-16T09:30:56.065Z",
-  "winner": "nvidia/nemotron-3.5-bolt-e4b",
+  "updatedAt": "2026-11-23T10:53:25.868Z",
+  "winner": "nvidia/ising-calibration-1.5-31b",
   "fallbacks": [
-    "nvidia/ising-calibration-1.5-31b",
-    "nvidia/riva-translate-4b-instruct-v2",
-    "nvidia/nemotron-3.5-lightning-30b-a3b",
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+    "nvidia/nemotron-3.5-bolt-e4b",
+    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+    "nvidia/nemotron-3-ultra-550b-a55b"
   ],
   "scoring": {
     "titleMin": 35,
@@ -27,48 +26,59 @@
   },
   "runtimeSelection": {
     "selectedPolicy": "runtime-eligible-quality-warning",
-    "eligibleCount": 5,
+    "eligibleCount": 4,
     "qualityEligibleCount": 0,
     "models": [
-      "nvidia/nemotron-3.5-bolt-e4b",
       "nvidia/ising-calibration-1.5-31b",
-      "nvidia/riva-translate-4b-instruct-v2",
-      "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning"
+      "nvidia/nemotron-3.5-bolt-e4b",
+      "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "nvidia/nemotron-3-ultra-550b-a55b"
     ],
     "excludedModels": [
       {
         "id": "poolside/laguna-xs-2.1",
         "reasons": [
-          "max latency 13195ms > 8000ms"
+          "max latency 11030ms > 8000ms"
         ]
       },
       {
-        "id": "nvidia/nemotron-3-ultra-550b-a55b",
+        "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
         "reasons": [
-          "max latency 8164ms > 8000ms"
+          "max latency 8773ms > 8000ms"
+        ]
+      },
+      {
+        "id": "nvidia/riva-translate-4b-instruct-v2",
+        "reasons": [
+          "avg latency 13595ms > 6000ms",
+          "max latency 14933ms > 8000ms",
+          "success rate 0.282 < 0.8",
+          "timeout failure rate 0.231 > 0.1",
+          "runtime eligible rate 0.000 < 0.5"
+        ]
+      },
+      {
+        "id": "stepfun-ai/step-5-preview",
+        "reasons": [
+          "avg latency 7002ms > 6000ms",
+          "max latency 14282ms > 8000ms",
+          "success rate 0.641 < 0.8",
+          "timeout failure rate 0.256 > 0.1",
+          "runtime eligible rate 0.000 < 0.5"
         ]
       },
       {
         "id": "minimaxai/minimax-m3.1-flash",
         "reasons": [
-          "avg latency 6770ms > 6000ms",
-          "max latency 13651ms > 8000ms",
-          "success rate 0.487 < 0.8",
-          "timeout failure rate 0.128 > 0.1",
+          "avg latency 0ms > 6000ms",
+          "max latency 0ms > 8000ms",
+          "success rate 0.000 < 0.8",
+          "timeout failure rate 0.231 > 0.1",
           "runtime eligible rate 0.000 < 0.5"
         ]
       },
       {
-        "id": "mistralai/mistral-large-4-1t-a52b",
-        "reasons": [
-          "max latency 8343ms > 8000ms",
-          "success rate 0.282 < 0.8",
-          "runtime eligible rate 0.000 < 0.5"
-        ]
-      },
-      {
-        "id": "deepseek-ai/deepseek-v4.1-flash",
+        "id": "moonshotai/kimi-k3.1-pro",
         "reasons": [
           "avg latency 0ms > 6000ms",
           "max latency 0ms > 8000ms",
@@ -79,16 +89,6 @@
       },
       {
         "id": "z-ai/glm-5.3-flash",
-        "reasons": [
-          "avg latency 0ms > 6000ms",
-          "max latency 0ms > 8000ms",
-          "success rate 0.000 < 0.8",
-          "timeout failure rate 0.231 > 0.1",
-          "runtime eligible rate 0.000 < 0.5"
-        ]
-      },
-      {
-        "id": "openai/gpt-oss-20b",
         "reasons": [
           "avg latency 0ms > 6000ms",
           "max latency 0ms > 8000ms",
@@ -126,39 +126,31 @@
         ]
       },
       {
-        "id": "stepfun-ai/step-5-preview",
+        "id": "fastino/gliner2-pii",
         "reasons": [
-          "avg latency 7225ms > 6000ms",
-          "max latency 8163ms > 8000ms",
-          "success rate 0.051 < 0.8",
+          "avg latency 0ms > 6000ms",
+          "max latency 0ms > 8000ms",
+          "success rate 0.000 < 0.8",
           "runtime eligible rate 0.000 < 0.5"
         ]
       },
       {
         "id": "meta/muse-glimmer-30b",
         "reasons": [
-          "avg latency 13639ms > 6000ms",
-          "max latency 13639ms > 8000ms",
-          "success rate 0.026 < 0.8",
+          "avg latency 0ms > 6000ms",
+          "max latency 0ms > 8000ms",
+          "success rate 0.000 < 0.8",
           "timeout failure rate 0.231 > 0.1",
           "runtime eligible rate 0.000 < 0.5"
         ]
       },
       {
-        "id": "nvidia/nemotron-parse",
+        "id": "mistralai/mistral-large-4-1t-a52b",
         "reasons": [
-          "avg latency 0ms > 6000ms",
-          "max latency 0ms > 8000ms",
-          "success rate 0.000 < 0.8",
-          "runtime eligible rate 0.000 < 0.5"
-        ]
-      },
-      {
-        "id": "nvidia/nemotron-parse-2.0",
-        "reasons": [
-          "avg latency 0ms > 6000ms",
-          "max latency 0ms > 8000ms",
-          "success rate 0.000 < 0.8",
+          "avg latency 7047ms > 6000ms",
+          "max latency 8132ms > 8000ms",
+          "success rate 0.051 < 0.8",
+          "timeout failure rate 0.231 > 0.1",
           "runtime eligible rate 0.000 < 0.5"
         ]
       }
@@ -167,18 +159,76 @@
   "aggregation": {
     "runCount": 3,
     "sourceFiles": [
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-1-20261116-085811-model-ranking.json",
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-2-20261116-091056-model-ranking.json",
-      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-3-20261116-092057-model-ranking.json"
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-1-20261123-101525-model-ranking.json",
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-2-20261123-102857-model-ranking.json",
+      "/home/runner/work/bigseller-model-evaluator/bigseller-model-evaluator/bigseller-model-evaluator/out/stable-runs/round-3-20261123-104158-model-ranking.json"
     ],
     "minStableRuntimeEligibleRate": 0.5,
     "sourceUpdatedAt": [
-      "2026-11-16T09:09:56.064Z",
-      "2026-11-16T09:19:57.530Z",
-      "2026-11-16T09:30:55.984Z"
+      "2026-11-23T10:27:57.814Z",
+      "2026-11-23T10:40:58.387Z",
+      "2026-11-23T10:53:25.794Z"
     ]
   },
   "models": [
+    {
+      "id": "nvidia/ising-calibration-1.5-31b",
+      "finalScore": 55,
+      "avgQuality": 57,
+      "hardPassRate": 0,
+      "successRate": 1,
+      "requestFailureRate": 0,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 620,
+      "maxLatencyMs": 1264,
+      "latencyPass": true,
+      "runtimeEligible": true,
+      "runtimeRejectionReasons": [],
+      "tested": 39,
+      "successCount": 39,
+      "requestFailureCount": 0,
+      "timeoutFailureCount": 0,
+      "skippedCount": 0,
+      "appearances": 3,
+      "appearanceRate": 1,
+      "runtimeEligibleRate": 1,
+      "qualityEligibleRate": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 52,
+          "avgQuality": 57,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 812,
+          "maxLatencyMs": 1232,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 53,
+          "avgQuality": 58,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 475,
+          "maxLatencyMs": 1264,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 53,
+          "avgQuality": 57,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 574,
+          "maxLatencyMs": 1147,
+          "runtimeEligible": true
+        }
+      ]
+    },
     {
       "id": "nvidia/nemotron-3.5-bolt-e4b",
       "finalScore": 54,
@@ -187,8 +237,8 @@
       "successRate": 1,
       "requestFailureRate": 0,
       "timeoutFailureRate": 0,
-      "avgLatencyMs": 431,
-      "maxLatencyMs": 491,
+      "avgLatencyMs": 873,
+      "maxLatencyMs": 4545,
       "latencyPass": true,
       "runtimeEligible": true,
       "runtimeRejectionReasons": [],
@@ -204,209 +254,35 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 52,
-          "avgQuality": 56,
+          "avgQuality": 55,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 421,
-          "maxLatencyMs": 459,
+          "avgLatencyMs": 954,
+          "maxLatencyMs": 3209,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 51,
           "avgQuality": 55,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 445,
-          "maxLatencyMs": 491,
+          "avgLatencyMs": 1259,
+          "maxLatencyMs": 4545,
           "runtimeEligible": true
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 51,
           "avgQuality": 55,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 426,
-          "maxLatencyMs": 461,
-          "runtimeEligible": true
-        }
-      ]
-    },
-    {
-      "id": "nvidia/ising-calibration-1.5-31b",
-      "finalScore": 54,
-      "avgQuality": 56,
-      "hardPassRate": 0,
-      "successRate": 1,
-      "requestFailureRate": 0,
-      "timeoutFailureRate": 0,
-      "avgLatencyMs": 1286,
-      "maxLatencyMs": 4240,
-      "latencyPass": true,
-      "runtimeEligible": true,
-      "runtimeRejectionReasons": [],
-      "tested": 39,
-      "successCount": 39,
-      "requestFailureCount": 0,
-      "timeoutFailureCount": 0,
-      "skippedCount": 0,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 1,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 53,
-          "avgQuality": 58,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1102,
-          "maxLatencyMs": 2357,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 51,
-          "avgQuality": 55,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1180,
-          "maxLatencyMs": 4240,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 52,
-          "avgQuality": 56,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1577,
-          "maxLatencyMs": 2880,
-          "runtimeEligible": true
-        }
-      ]
-    },
-    {
-      "id": "nvidia/riva-translate-4b-instruct-v2",
-      "finalScore": 18,
-      "avgQuality": 5,
-      "hardPassRate": 0,
-      "successRate": 1,
-      "requestFailureRate": 0,
-      "timeoutFailureRate": 0,
-      "avgLatencyMs": 671,
-      "maxLatencyMs": 783,
-      "latencyPass": true,
-      "runtimeEligible": true,
-      "runtimeRejectionReasons": [],
-      "tested": 39,
-      "successCount": 39,
-      "requestFailureCount": 0,
-      "timeoutFailureCount": 0,
-      "skippedCount": 0,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 1,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 14,
-          "avgQuality": 5,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 671,
-          "maxLatencyMs": 762,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 14,
-          "avgQuality": 5,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 662,
-          "maxLatencyMs": 774,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 14,
-          "avgQuality": 5,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 680,
-          "maxLatencyMs": 783,
-          "runtimeEligible": true
-        }
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
-      "finalScore": 14,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 1,
-      "requestFailureRate": 0,
-      "timeoutFailureRate": 0,
-      "avgLatencyMs": 1058,
-      "maxLatencyMs": 3136,
-      "latencyPass": true,
-      "runtimeEligible": true,
-      "runtimeRejectionReasons": [],
-      "tested": 39,
-      "successCount": 39,
-      "requestFailureCount": 0,
-      "timeoutFailureCount": 0,
-      "skippedCount": 0,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 1,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 10,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1322,
-          "maxLatencyMs": 3136,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 10,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 950,
-          "maxLatencyMs": 2090,
-          "runtimeEligible": true
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 10,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 903,
-          "maxLatencyMs": 1664,
+          "avgLatencyMs": 405,
+          "maxLatencyMs": 906,
           "runtimeEligible": true
         }
       ]
@@ -419,8 +295,8 @@
       "successRate": 1,
       "requestFailureRate": 0,
       "timeoutFailureRate": 0,
-      "avgLatencyMs": 1681,
-      "maxLatencyMs": 2910,
+      "avgLatencyMs": 1531,
+      "maxLatencyMs": 3051,
       "latencyPass": true,
       "runtimeEligible": true,
       "runtimeRejectionReasons": [],
@@ -436,35 +312,93 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1664,
-          "maxLatencyMs": 2910,
+          "avgLatencyMs": 1735,
+          "maxLatencyMs": 3051,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1867,
-          "maxLatencyMs": 2482,
+          "avgLatencyMs": 1589,
+          "maxLatencyMs": 2233,
           "runtimeEligible": true
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1511,
-          "maxLatencyMs": 2816,
+          "avgLatencyMs": 1269,
+          "maxLatencyMs": 1847,
+          "runtimeEligible": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "finalScore": 14,
+      "avgQuality": 0,
+      "hardPassRate": 0,
+      "successRate": 1,
+      "requestFailureRate": 0,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 2996,
+      "maxLatencyMs": 6887,
+      "latencyPass": true,
+      "runtimeEligible": true,
+      "runtimeRejectionReasons": [],
+      "tested": 39,
+      "successCount": 39,
+      "requestFailureCount": 0,
+      "timeoutFailureCount": 0,
+      "skippedCount": 0,
+      "appearances": 3,
+      "appearanceRate": 1,
+      "runtimeEligibleRate": 1,
+      "qualityEligibleRate": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 9,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 2916,
+          "maxLatencyMs": 4501,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 10,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 2789,
+          "maxLatencyMs": 4565,
+          "runtimeEligible": true
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 9,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 3283,
+          "maxLatencyMs": 6887,
           "runtimeEligible": true
         }
       ]
@@ -477,12 +411,12 @@
       "successRate": 1,
       "requestFailureRate": 0,
       "timeoutFailureRate": 0,
-      "avgLatencyMs": 1202,
-      "maxLatencyMs": 13195,
+      "avgLatencyMs": 1050,
+      "maxLatencyMs": 11030,
       "latencyPass": false,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "max latency 13195ms > 8000ms"
+        "max latency 11030ms > 8000ms"
       ],
       "tested": 39,
       "successCount": 39,
@@ -496,53 +430,53 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 54,
-          "avgQuality": 58,
+          "avgQuality": 59,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 1127,
-          "maxLatencyMs": 4150,
+          "avgLatencyMs": 453,
+          "maxLatencyMs": 794,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 52,
-          "avgQuality": 57,
-          "hardPassRate": 0,
-          "successRate": 1,
-          "avgLatencyMs": 1854,
-          "maxLatencyMs": 13195,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 53,
           "avgQuality": 57,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 625,
-          "maxLatencyMs": 806,
+          "avgLatencyMs": 1069,
+          "maxLatencyMs": 2706,
           "runtimeEligible": true
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 52,
+          "avgQuality": 56,
+          "hardPassRate": 0,
+          "successRate": 1,
+          "avgLatencyMs": 1628,
+          "maxLatencyMs": 11030,
+          "runtimeEligible": false
         }
       ]
     },
     {
-      "id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "id": "nvidia/nemotron-3.5-lightning-30b-a3b",
       "finalScore": 12,
       "avgQuality": 0,
       "hardPassRate": 0,
       "successRate": 1,
       "requestFailureRate": 0,
       "timeoutFailureRate": 0,
-      "avgLatencyMs": 3299,
-      "maxLatencyMs": 8164,
+      "avgLatencyMs": 1163,
+      "maxLatencyMs": 8773,
       "latencyPass": false,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "max latency 8164ms > 8000ms"
+        "max latency 8773ms > 8000ms"
       ],
       "tested": 39,
       "successCount": 39,
@@ -556,167 +490,169 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 3603,
-          "maxLatencyMs": 5612,
+          "avgLatencyMs": 997,
+          "maxLatencyMs": 3073,
           "runtimeEligible": true
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 3069,
-          "maxLatencyMs": 8164,
+          "avgLatencyMs": 1507,
+          "maxLatencyMs": 8773,
           "runtimeEligible": false
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 9,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 10,
           "avgQuality": 0,
           "hardPassRate": 0,
           "successRate": 1,
-          "avgLatencyMs": 3226,
-          "maxLatencyMs": 7492,
+          "avgLatencyMs": 985,
+          "maxLatencyMs": 1991,
           "runtimeEligible": true
+        }
+      ]
+    },
+    {
+      "id": "nvidia/riva-translate-4b-instruct-v2",
+      "finalScore": 9,
+      "avgQuality": 8,
+      "hardPassRate": 0,
+      "successRate": 0.282,
+      "requestFailureRate": 0.231,
+      "timeoutFailureRate": 0.231,
+      "avgLatencyMs": 13595,
+      "maxLatencyMs": 14933,
+      "latencyPass": false,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 13595ms > 6000ms",
+        "max latency 14933ms > 8000ms",
+        "success rate 0.282 < 0.8",
+        "timeout failure rate 0.231 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "tested": 39,
+      "successCount": 11,
+      "requestFailureCount": 9,
+      "timeoutFailureCount": 9,
+      "skippedCount": 19,
+      "appearances": 3,
+      "appearanceRate": 1,
+      "runtimeEligibleRate": 0,
+      "qualityEligibleRate": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 10,
+          "avgQuality": 8,
+          "hardPassRate": 0,
+          "successRate": 0.538,
+          "avgLatencyMs": 13312,
+          "maxLatencyMs": 14557,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 8,
+          "avgQuality": 7,
+          "hardPassRate": 0,
+          "successRate": 0.308,
+          "avgLatencyMs": 13878,
+          "maxLatencyMs": 14933,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "stepfun-ai/step-5-preview",
+      "finalScore": 5,
+      "avgQuality": 0,
+      "hardPassRate": 0,
+      "successRate": 0.641,
+      "requestFailureRate": 0.256,
+      "timeoutFailureRate": 0.256,
+      "avgLatencyMs": 7002,
+      "maxLatencyMs": 14282,
+      "latencyPass": false,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 7002ms > 6000ms",
+        "max latency 14282ms > 8000ms",
+        "success rate 0.641 < 0.8",
+        "timeout failure rate 0.256 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "tested": 39,
+      "successCount": 25,
+      "requestFailureCount": 10,
+      "timeoutFailureCount": 10,
+      "skippedCount": 4,
+      "appearances": 3,
+      "appearanceRate": 1,
+      "runtimeEligibleRate": 0,
+      "qualityEligibleRate": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 5,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.308,
+          "avgLatencyMs": 7476,
+          "maxLatencyMs": 11197,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 8,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.923,
+          "avgLatencyMs": 5525,
+          "maxLatencyMs": 12744,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 7,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.692,
+          "avgLatencyMs": 8004,
+          "maxLatencyMs": 14282,
+          "runtimeEligible": false
         }
       ]
     },
     {
       "id": "minimaxai/minimax-m3.1-flash",
-      "finalScore": 4,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.487,
-      "requestFailureRate": 0.359,
-      "timeoutFailureRate": 0.128,
-      "avgLatencyMs": 6770,
-      "maxLatencyMs": 13651,
-      "latencyPass": false,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 6770ms > 6000ms",
-        "max latency 13651ms > 8000ms",
-        "success rate 0.487 < 0.8",
-        "timeout failure rate 0.128 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "tested": 39,
-      "successCount": 19,
-      "requestFailureCount": 14,
-      "timeoutFailureCount": 5,
-      "skippedCount": 6,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 0,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 5,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.538,
-          "avgLatencyMs": 9995,
-          "maxLatencyMs": 13651,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 7,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.615,
-          "avgLatencyMs": 4816,
-          "maxLatencyMs": 11531,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 5,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.308,
-          "avgLatencyMs": 5500,
-          "maxLatencyMs": 10690,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "mistralai/mistral-large-4-1t-a52b",
-      "finalScore": 3,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0.282,
-      "requestFailureRate": 0.205,
-      "timeoutFailureRate": 0.051,
-      "avgLatencyMs": 3292,
-      "maxLatencyMs": 8343,
-      "latencyPass": false,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "max latency 8343ms > 8000ms",
-        "success rate 0.282 < 0.8",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "tested": 39,
-      "successCount": 11,
-      "requestFailureCount": 8,
-      "timeoutFailureCount": 2,
-      "skippedCount": 20,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 0,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 9,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.846,
-          "avgLatencyMs": 3292,
-          "maxLatencyMs": 8343,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "deepseek-ai/deepseek-v4.1-flash",
       "finalScore": 2,
       "avgQuality": 0,
       "hardPassRate": 0,
@@ -746,7 +682,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -757,7 +693,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -768,7 +704,71 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        }
+      ]
+    },
+    {
+      "id": "moonshotai/kimi-k3.1-pro",
+      "finalScore": 2,
+      "avgQuality": 0,
+      "hardPassRate": 0,
+      "successRate": 0,
+      "requestFailureRate": 0.231,
+      "timeoutFailureRate": 0.231,
+      "avgLatencyMs": 0,
+      "maxLatencyMs": 0,
+      "latencyPass": false,
+      "runtimeEligible": false,
+      "runtimeRejectionReasons": [
+        "avg latency 0ms > 6000ms",
+        "max latency 0ms > 8000ms",
+        "success rate 0.000 < 0.8",
+        "timeout failure rate 0.231 > 0.1",
+        "runtime eligible rate 0.000 < 0.5"
+      ],
+      "tested": 39,
+      "successCount": 0,
+      "requestFailureCount": 9,
+      "timeoutFailureCount": 9,
+      "skippedCount": 30,
+      "appearances": 3,
+      "appearanceRate": 1,
+      "runtimeEligibleRate": 0,
+      "qualityEligibleRate": 0,
+      "runs": [
+        {
+          "runIndex": 1,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -810,7 +810,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -821,7 +821,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -832,71 +832,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "openai/gpt-oss-20b",
-      "finalScore": 2,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0,
-      "requestFailureRate": 0.231,
-      "timeoutFailureRate": 0.231,
-      "avgLatencyMs": 0,
-      "maxLatencyMs": 0,
-      "latencyPass": false,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 0ms > 6000ms",
-        "max latency 0ms > 8000ms",
-        "success rate 0.000 < 0.8",
-        "timeout failure rate 0.231 > 0.1",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "tested": 39,
-      "successCount": 0,
-      "requestFailureCount": 9,
-      "timeoutFailureCount": 9,
-      "skippedCount": 30,
-      "appearances": 3,
-      "appearanceRate": 1,
-      "runtimeEligibleRate": 0,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
-          "finalScore": 0,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0,
-          "avgLatencyMs": 0,
-          "maxLatencyMs": 0,
-          "runtimeEligible": false
-        },
-        {
-          "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -937,7 +873,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -948,7 +884,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -959,7 +895,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1000,7 +936,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1011,7 +947,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1022,7 +958,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1064,7 +1000,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1075,7 +1011,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1086,7 +1022,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1098,28 +1034,28 @@
       ]
     },
     {
-      "id": "stepfun-ai/step-5-preview",
+      "id": "fastino/gliner2-pii",
       "finalScore": 2,
       "avgQuality": 0,
       "hardPassRate": 0,
-      "successRate": 0.051,
-      "requestFailureRate": 0.282,
-      "timeoutFailureRate": 0.051,
-      "avgLatencyMs": 7225,
-      "maxLatencyMs": 8163,
+      "successRate": 0,
+      "requestFailureRate": 0.231,
+      "timeoutFailureRate": 0,
+      "avgLatencyMs": 0,
+      "maxLatencyMs": 0,
       "latencyPass": false,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "avg latency 7225ms > 6000ms",
-        "max latency 8163ms > 8000ms",
-        "success rate 0.051 < 0.8",
+        "avg latency 0ms > 6000ms",
+        "max latency 0ms > 8000ms",
+        "success rate 0.000 < 0.8",
         "runtime eligible rate 0.000 < 0.5"
       ],
       "tested": 39,
-      "successCount": 2,
-      "requestFailureCount": 11,
-      "timeoutFailureCount": 2,
-      "skippedCount": 26,
+      "successCount": 0,
+      "requestFailureCount": 9,
+      "timeoutFailureCount": 0,
+      "skippedCount": 30,
       "appearances": 3,
       "appearanceRate": 1,
       "runtimeEligibleRate": 0,
@@ -1127,18 +1063,18 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
-          "finalScore": 4,
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
-          "successRate": 0.154,
-          "avgLatencyMs": 7225,
-          "maxLatencyMs": 8163,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
           "runtimeEligible": false
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1149,7 +1085,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1165,25 +1101,25 @@
       "finalScore": 2,
       "avgQuality": 0,
       "hardPassRate": 0,
-      "successRate": 0.026,
+      "successRate": 0,
       "requestFailureRate": 0.231,
       "timeoutFailureRate": 0.231,
-      "avgLatencyMs": 13639,
-      "maxLatencyMs": 13639,
+      "avgLatencyMs": 0,
+      "maxLatencyMs": 0,
       "latencyPass": false,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "avg latency 13639ms > 6000ms",
-        "max latency 13639ms > 8000ms",
-        "success rate 0.026 < 0.8",
+        "avg latency 0ms > 6000ms",
+        "max latency 0ms > 8000ms",
+        "success rate 0.000 < 0.8",
         "timeout failure rate 0.231 > 0.1",
         "runtime eligible rate 0.000 < 0.5"
       ],
       "tested": 39,
-      "successCount": 1,
+      "successCount": 0,
       "requestFailureCount": 9,
       "timeoutFailureCount": 9,
-      "skippedCount": 29,
+      "skippedCount": 30,
       "appearances": 3,
       "appearanceRate": 1,
       "runtimeEligibleRate": 0,
@@ -1191,7 +1127,7 @@
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1202,7 +1138,7 @@
         },
         {
           "runIndex": 2,
-          "sourceUpdatedAt": "2026-11-16T09:19:57.530Z",
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1213,48 +1149,7 @@
         },
         {
           "runIndex": 3,
-          "sourceUpdatedAt": "2026-11-16T09:30:55.984Z",
-          "finalScore": 2,
-          "avgQuality": 0,
-          "hardPassRate": 0,
-          "successRate": 0.077,
-          "avgLatencyMs": 13639,
-          "maxLatencyMs": 13639,
-          "runtimeEligible": false
-        }
-      ]
-    },
-    {
-      "id": "nvidia/nemotron-parse",
-      "finalScore": 1,
-      "avgQuality": 0,
-      "hardPassRate": 0,
-      "successRate": 0,
-      "requestFailureRate": 0.231,
-      "timeoutFailureRate": 0,
-      "avgLatencyMs": 0,
-      "maxLatencyMs": 0,
-      "latencyPass": false,
-      "runtimeEligible": false,
-      "runtimeRejectionReasons": [
-        "avg latency 0ms > 6000ms",
-        "max latency 0ms > 8000ms",
-        "success rate 0.000 < 0.8",
-        "runtime eligible rate 0.000 < 0.5"
-      ],
-      "tested": 13,
-      "successCount": 0,
-      "requestFailureCount": 3,
-      "timeoutFailureCount": 0,
-      "skippedCount": 10,
-      "appearances": 1,
-      "appearanceRate": 0.333,
-      "runtimeEligibleRate": 0,
-      "qualityEligibleRate": 0,
-      "runs": [
-        {
-          "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1266,36 +1161,59 @@
       ]
     },
     {
-      "id": "nvidia/nemotron-parse-2.0",
-      "finalScore": 1,
+      "id": "mistralai/mistral-large-4-1t-a52b",
+      "finalScore": 2,
       "avgQuality": 0,
       "hardPassRate": 0,
-      "successRate": 0,
+      "successRate": 0.051,
       "requestFailureRate": 0.231,
-      "timeoutFailureRate": 0,
-      "avgLatencyMs": 0,
-      "maxLatencyMs": 0,
+      "timeoutFailureRate": 0.231,
+      "avgLatencyMs": 7047,
+      "maxLatencyMs": 8132,
       "latencyPass": false,
       "runtimeEligible": false,
       "runtimeRejectionReasons": [
-        "avg latency 0ms > 6000ms",
-        "max latency 0ms > 8000ms",
-        "success rate 0.000 < 0.8",
+        "avg latency 7047ms > 6000ms",
+        "max latency 8132ms > 8000ms",
+        "success rate 0.051 < 0.8",
+        "timeout failure rate 0.231 > 0.1",
         "runtime eligible rate 0.000 < 0.5"
       ],
-      "tested": 13,
-      "successCount": 0,
-      "requestFailureCount": 3,
-      "timeoutFailureCount": 0,
-      "skippedCount": 10,
-      "appearances": 1,
-      "appearanceRate": 0.333,
+      "tested": 39,
+      "successCount": 2,
+      "requestFailureCount": 9,
+      "timeoutFailureCount": 9,
+      "skippedCount": 28,
+      "appearances": 3,
+      "appearanceRate": 1,
       "runtimeEligibleRate": 0,
       "qualityEligibleRate": 0,
       "runs": [
         {
           "runIndex": 1,
-          "sourceUpdatedAt": "2026-11-16T09:09:56.064Z",
+          "sourceUpdatedAt": "2026-11-23T10:27:57.814Z",
+          "finalScore": 0,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0,
+          "avgLatencyMs": 0,
+          "maxLatencyMs": 0,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 2,
+          "sourceUpdatedAt": "2026-11-23T10:40:58.387Z",
+          "finalScore": 4,
+          "avgQuality": 0,
+          "hardPassRate": 0,
+          "successRate": 0.154,
+          "avgLatencyMs": 7047,
+          "maxLatencyMs": 8132,
+          "runtimeEligible": false
+        },
+        {
+          "runIndex": 3,
+          "sourceUpdatedAt": "2026-11-23T10:53:25.794Z",
           "finalScore": 0,
           "avgQuality": 0,
           "hardPassRate": 0,
@@ -1322,7 +1240,7 @@
           "含禁用词或格式: 泛营销词",
           "主类目未放最前: 期望 玛丽珍单鞋"
         ],
-        "elapsedMs": 691
+        "elapsedMs": 410
       },
       {
         "ok": true,
@@ -1336,21 +1254,21 @@
           "字数 26 不在 35-55",
           "主类目未放最前: 期望 玛丽珍单鞋"
         ],
-        "elapsedMs": 806
+        "elapsedMs": 11030
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "rawOutput": "女鞋夹脚人字拖鞋糖果色简约休闲夏日沙滩凉拖",
-        "cleaned": "女鞋夹脚人字拖鞋糖果色简约休闲夏日沙滩凉拖",
-        "score": 62,
+        "rawOutput": "女鞋夹脚人字拖鞋糖果色简约休闲沙滩凉拖夏季外穿",
+        "cleaned": "女鞋夹脚人字拖鞋糖果色简约休闲沙滩凉拖夏季外穿",
+        "score": 66,
         "hardPass": false,
-        "count": 21,
+        "count": 23,
         "reasons": [
-          "字数 21 不在 35-55",
+          "字数 23 不在 35-55",
           "主类目未放最前: 期望 人字拖鞋"
         ],
-        "elapsedMs": 539
+        "elapsedMs": 321
       },
       {
         "ok": true,
@@ -1365,27 +1283,27 @@
           "含禁用词或格式: 泛营销词",
           "主类目未放最前: 期望 一字带凉鞋"
         ],
-        "elapsedMs": 730
+        "elapsedMs": 934
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "rawOutput": "女鞋编织粗跟凉拖鞋夏季时尚百搭外穿轻便舒适适合户间凉鞋",
-        "cleaned": "女鞋编织粗跟凉拖鞋夏季时尚百搭外穿轻便舒适适合户间凉鞋",
-        "score": 74,
+        "rawOutput": "女鞋编织粗跟凉拖鞋夏季时尚百搭外穿轻薄舒适适合凉鞋配裙子",
+        "cleaned": "女鞋编织粗跟凉拖鞋夏季时尚百搭外穿轻薄舒适适合凉鞋配裙子",
+        "score": 76,
         "hardPass": false,
-        "count": 27,
+        "count": 28,
         "reasons": [
-          "字数 27 不在 35-55",
+          "字数 28 不在 35-55",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 634
+        "elapsedMs": 778
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "rawOutput": "女鞋平底鞋复古波点单鞋浅口舒适一脚蹬豆豆鞋",
-        "cleaned": "女鞋平底鞋复古波点单鞋浅口舒适一脚蹬豆豆鞋",
+        "rawOutput": "女鞋复古波点平底鞋舒适浅口豆豆鞋温柔一脚蹬",
+        "cleaned": "女鞋复古波点平底鞋舒适浅口豆豆鞋温柔一脚蹬",
         "score": 62,
         "hardPass": false,
         "count": 21,
@@ -1393,7 +1311,7 @@
           "字数 21 不在 35-55",
           "主类目未放最前: 期望 豆豆鞋"
         ],
-        "elapsedMs": 620
+        "elapsedMs": 4006
       },
       {
         "ok": true,
@@ -1407,7 +1325,7 @@
           "字数 20 不在 35-55",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 468
+        "elapsedMs": 523
       },
       {
         "ok": true,
@@ -1422,37 +1340,37 @@
           "含禁用词或格式: 年份 跨境外贸渠道词 泛营销词",
           "主类目未放最前: 期望 高跟鞋"
         ],
-        "elapsedMs": 577
+        "elapsedMs": 539
       },
       {
         "ok": true,
         "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "rawOutput": "欧美单鞋女简约复古风春夏纯色豆豆小皮鞋2026新款轻盈舒适",
-        "cleaned": "欧美单鞋女简约复古风春夏纯色豆豆小皮鞋2026新款轻盈舒适",
-        "score": 54,
+        "rawOutput": "女简约复古纯色豆豆小皮鞋 欧美跨境春夏季新款2026",
+        "cleaned": "女简约复古纯色豆豆小皮鞋 欧美跨境春夏季新款2026",
+        "score": 34,
         "hardPass": false,
-        "count": 29,
+        "count": 25,
         "reasons": [
-          "字数 29 不在 35-55",
-          "含禁用词或格式: 年份 泛营销词",
+          "字数 25 不在 35-55",
+          "含禁用词或格式: 年份 跨境外贸渠道词 泛营销词",
           "主类目未放最前: 期望 豆豆小皮鞋"
         ],
-        "elapsedMs": 565
+        "elapsedMs": 593
       },
       {
         "ok": true,
         "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "rawOutput": "圆头厚底镂空水钻凉拖鞋女鞋夏季时尚一字凉鞋",
-        "cleaned": "圆头厚底镂空水钻凉拖鞋女鞋夏季时尚一字凉鞋",
-        "score": 36,
+        "rawOutput": "圆头厚底女鞋时尚水钻镂空拼接一字凉拖鞋夏季新品",
+        "cleaned": "圆头厚底女鞋时尚水钻镂空拼接一字凉拖鞋夏季新品",
+        "score": 54,
         "hardPass": false,
-        "count": 21,
+        "count": 23,
         "reasons": [
-          "字数 21 不在 35-55",
-          "缺少主类目: 一字凉拖鞋",
-          "疑似新增不一致类目词: 凉鞋"
+          "字数 23 不在 35-55",
+          "含禁用词或格式: 泛营销词",
+          "主类目未放最前: 期望 一字凉拖鞋"
         ],
-        "elapsedMs": 519
+        "elapsedMs": 501
       },
       {
         "ok": true,
@@ -1466,53 +1384,53 @@
           "字数 26 不在 35-55",
           "主类目未放最前: 期望 鱼嘴高跟拖鞋"
         ],
-        "elapsedMs": 579
+        "elapsedMs": 620
       },
       {
         "ok": true,
         "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "rawOutput": "女士坡跟鱼嘴厚底凉鞋 欧美直供 新款欧式凉鞋 鱼嘴设计 夏季通勤 舒适减压",
-        "cleaned": "女士坡跟鱼嘴厚底凉鞋 欧美直供 新款欧式凉鞋 鱼嘴设计 夏季通勤 舒适减压",
-        "score": 42,
+        "rawOutput": "女士坡跟鱼嘴厚底凉鞋 欧美直供新款 复古铆钉设计 夏季休闲舒适",
+        "cleaned": "女士坡跟鱼嘴厚底凉鞋 欧美直供新款 复古铆钉设计 夏季休闲舒适",
+        "score": 34,
         "hardPass": false,
-        "count": 32,
+        "count": 28,
         "reasons": [
-          "字数 32 不在 35-55",
+          "字数 28 不在 35-55",
           "含禁用词或格式: 跨境外贸渠道词 泛营销词",
           "缺少主类目: 坡跟鱼嘴厚底铆钉凉鞋"
         ],
-        "elapsedMs": 674
+        "elapsedMs": 529
       },
       {
         "ok": true,
         "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "rawOutput": "平底拖鞋女欧美流苏沙滩拖鞋2024年夏季新款轻薄透气欧式休闲鞋",
-        "cleaned": "平底拖鞋女欧美流苏沙滩拖鞋2024年夏季新款轻薄透气欧式休闲鞋",
-        "score": 68,
+        "rawOutput": "平底拖鞋女欧美流苏沙滩新款夏季舒适女鞋",
+        "cleaned": "平底拖鞋女欧美流苏沙滩新款夏季舒适女鞋",
+        "score": 58,
         "hardPass": false,
-        "count": 31,
+        "count": 19,
         "reasons": [
-          "字数 31 不在 35-55",
-          "含禁用词或格式: 年份 泛营销词"
+          "字数 19 不在 35-55",
+          "含禁用词或格式: 泛营销词"
         ],
-        "elapsedMs": 721
+        "elapsedMs": 374
       }
     ],
     "nvidia/ising-calibration-1.5-31b": [
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "rawOutput": "女鞋复古圆头玛丽珍单鞋 春秋新款编织镂空透气凉鞋",
-        "cleaned": "女鞋复古圆头玛丽珍单鞋 春秋新款编织镂空透气凉鞋",
-        "score": 54,
+        "rawOutput": "女鞋复古圆头玛丽珍单鞋 春秋新款编织镂空透气凉鞋 舒适百搭休闲鞋",
+        "cleaned": "女鞋复古圆头玛丽珍单鞋 春秋新款编织镂空透气凉鞋 舒适百搭休闲鞋",
+        "score": 68,
         "hardPass": false,
-        "count": 23,
+        "count": 30,
         "reasons": [
-          "字数 23 不在 35-55",
+          "字数 30 不在 35-55",
           "含禁用词或格式: 泛营销词",
           "主类目未放最前: 期望 玛丽珍单鞋"
         ],
-        "elapsedMs": 815
+        "elapsedMs": 666
       },
       {
         "ok": true,
@@ -1526,7 +1444,7 @@
           "字数 28 不在 35-55",
           "主类目未放最前: 期望 玛丽珍单鞋"
         ],
-        "elapsedMs": 928
+        "elapsedMs": 1007
       },
       {
         "ok": true,
@@ -1540,22 +1458,22 @@
           "字数 19 不在 35-55",
           "主类目未放最前: 期望 人字拖鞋"
         ],
-        "elapsedMs": 2295
+        "elapsedMs": 377
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "rawOutput": "女鞋法式波点高跟鞋 细跟一字带凉鞋 夏季新款 优雅时尚",
-        "cleaned": "女鞋法式波点高跟鞋 细跟一字带凉鞋 夏季新款 优雅时尚",
-        "score": 56,
+        "rawOutput": "女鞋法式波点高跟鞋 细跟一字带 凉鞋 夏季新款 优雅时尚",
+        "cleaned": "女鞋法式波点高跟鞋 细跟一字带 凉鞋 夏季新款 优雅时尚",
+        "score": 38,
         "hardPass": false,
         "count": 24,
         "reasons": [
           "字数 24 不在 35-55",
           "含禁用词或格式: 泛营销词",
-          "主类目未放最前: 期望 一字带凉鞋"
+          "缺少主类目: 一字带凉鞋"
         ],
-        "elapsedMs": 1254
+        "elapsedMs": 484
       },
       {
         "ok": true,
@@ -1569,13 +1487,13 @@
           "字数 25 不在 35-55",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 1120
+        "elapsedMs": 525
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "rawOutput": "女鞋平底单鞋复古波点浅口舒适一脚蹬豆豆鞋",
-        "cleaned": "女鞋平底单鞋复古波点浅口舒适一脚蹬豆豆鞋",
+        "rawOutput": "女鞋平底豆豆鞋复古波点浅口一脚蹬舒适单鞋",
+        "cleaned": "女鞋平底豆豆鞋复古波点浅口一脚蹬舒适单鞋",
         "score": 60,
         "hardPass": false,
         "count": 20,
@@ -1583,22 +1501,22 @@
           "字数 20 不在 35-55",
           "主类目未放最前: 期望 豆豆鞋"
         ],
-        "elapsedMs": 2880
+        "elapsedMs": 358
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "rawOutput": "女鞋复古编织平底凉拖鞋 夏季新款时尚度假人字拖 舒适透气休闲鞋",
-        "cleaned": "女鞋复古编织平底凉拖鞋 夏季新款时尚度假人字拖 舒适透气休闲鞋",
-        "score": 66,
+        "rawOutput": "女鞋复古编织平底凉拖鞋 夏季新款时尚度假人字拖 舒适透气休闲海滩鞋",
+        "cleaned": "女鞋复古编织平底凉拖鞋 夏季新款时尚度假人字拖 舒适透气休闲海滩鞋",
+        "score": 70,
         "hardPass": false,
-        "count": 29,
+        "count": 31,
         "reasons": [
-          "字数 29 不在 35-55",
+          "字数 31 不在 35-55",
           "含禁用词或格式: 泛营销词",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 1894
+        "elapsedMs": 394
       },
       {
         "ok": true,
@@ -1614,7 +1532,7 @@
           "原始输出含标点",
           "不是纯一行标题"
         ],
-        "elapsedMs": 1514
+        "elapsedMs": 668
       },
       {
         "ok": true,
@@ -1629,38 +1547,37 @@
           "含禁用词或格式: 年份 跨境外贸渠道词 泛营销词",
           "主类目未放最前: 期望 豆豆小皮鞋"
         ],
-        "elapsedMs": 1848
+        "elapsedMs": 490
       },
       {
         "ok": true,
         "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "rawOutput": "夏季新品厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "cleaned": "夏季新品厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "score": 58,
+        "rawOutput": "夏季新品圆头水钻镂空拼接时尚一字凉拖鞋女",
+        "cleaned": "夏季新品圆头水钻镂空拼接时尚一字凉拖鞋女",
+        "score": 48,
         "hardPass": false,
-        "count": 25,
+        "count": 20,
         "reasons": [
-          "字数 25 不在 35-55",
+          "字数 20 不在 35-55",
           "含禁用词或格式: 泛营销词",
           "主类目未放最前: 期望 一字凉拖鞋"
         ],
-        "elapsedMs": 908
+        "elapsedMs": 345
       },
       {
         "ok": true,
         "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "rawOutput": "商品主类目词 + 核心属性词 + 高价值卖点词 + 场景用途词\n\n粗跟鱼嘴高跟拖鞋女 金属扣沙滩凉拖鞋 人字拖 2026夏季跨境外贸",
-        "cleaned": "商品主类目词 核心属性词 高价值卖点词 场景用途词 粗跟鱼嘴高跟拖鞋女 金属扣沙滩凉拖鞋 人字拖 2026夏季跨境外贸",
-        "score": 43,
+        "rawOutput": "商品主类目词 + 核心属性词 + 高价值卖点词 + 场景用途词\n\n夏季金属扣沙滩凉拖鞋 粗跟鱼嘴高跟拖鞋女 舒适防滑海边度假必备",
+        "cleaned": "商品主类目词 核心属性词 高价值卖点词 场景用途词 夏季金属扣沙滩凉拖鞋 粗跟鱼嘴高跟拖鞋女 舒适防滑海边度假必备",
+        "score": 67,
         "hardPass": false,
-        "count": 52,
+        "count": 51,
         "reasons": [
-          "含禁用词或格式: 年份 跨境外贸渠道词",
           "主类目未放最前: 期望 鱼嘴高跟拖鞋",
           "原始输出含标点",
           "不是纯一行标题"
         ],
-        "elapsedMs": 2360
+        "elapsedMs": 1147
       },
       {
         "ok": true,
@@ -1675,7 +1592,7 @@
           "含禁用词或格式: 跨境外贸渠道词 泛营销词",
           "主类目未放最前: 期望 坡跟鱼嘴厚底铆钉凉鞋"
         ],
-        "elapsedMs": 1796
+        "elapsedMs": 410
       },
       {
         "ok": true,
@@ -1690,7 +1607,7 @@
           "含禁用词或格式: 年份 跨境外贸渠道词 泛营销词",
           "主类目未放最前: 期望 平底拖鞋"
         ],
-        "elapsedMs": 885
+        "elapsedMs": 587
       }
     ],
     "nvidia/nemotron-3.5-bolt-e4b": [
@@ -1706,7 +1623,7 @@
           "字数 19 不在 35-55",
           "缺少主类目: 玛丽珍单鞋"
         ],
-        "elapsedMs": 435
+        "elapsedMs": 349
       },
       {
         "ok": true,
@@ -1720,37 +1637,36 @@
           "字数 23 不在 35-55",
           "缺少主类目: 玛丽珍单鞋"
         ],
-        "elapsedMs": 453
+        "elapsedMs": 402
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "rawOutput": "女鞋夹脚人字拖鞋夏涼感糖果色休閒沙灘穿搭",
-        "cleaned": "女鞋夹脚人字拖鞋夏涼感糖果色休閒沙灘穿搭",
-        "score": 50,
+        "rawOutput": "女鞋夹脚人字拖鞋夏涼感沙灘休閒簡約穿搭",
+        "cleaned": "女鞋夹脚人字拖鞋夏涼感沙灘休閒簡約穿搭",
+        "score": 43,
         "hardPass": false,
-        "count": 20,
+        "count": 19,
         "reasons": [
-          "字数 20 不在 35-55",
+          "字数 19 不在 35-55",
           "主类目未放最前: 期望 人字拖鞋",
-          "核心属性保留偏少: 2/6"
+          "核心属性保留偏少: 1/6"
         ],
-        "elapsedMs": 443
+        "elapsedMs": 377
       },
       {
         "ok": true,
         "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "rawOutput": "女鞋法式波点高跟鞋夏季细跟一字带凉鞋网红穿搭",
-        "cleaned": "女鞋法式波点高跟鞋夏季细跟一字带凉鞋网红穿搭",
-        "score": 52,
+        "rawOutput": "女鞋法式波点高跟鞋夏季细跟一字带凉鞋",
+        "cleaned": "女鞋法式波点高跟鞋夏季细跟一字带凉鞋",
+        "score": 60,
         "hardPass": false,
-        "count": 22,
+        "count": 18,
         "reasons": [
-          "字数 22 不在 35-55",
-          "含禁用词或格式: 泛营销词",
+          "字数 18 不在 35-55",
           "主类目未放最前: 期望 一字带凉鞋"
         ],
-        "elapsedMs": 453
+        "elapsedMs": 359
       },
       {
         "ok": true,
@@ -1764,7 +1680,7 @@
           "字数 19 不在 35-55",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 424
+        "elapsedMs": 396
       },
       {
         "ok": true,
@@ -1778,7 +1694,7 @@
           "字数 22 不在 35-55",
           "主类目未放最前: 期望 豆豆鞋"
         ],
-        "elapsedMs": 461
+        "elapsedMs": 399
       },
       {
         "ok": true,
@@ -1792,7 +1708,7 @@
           "字数 19 不在 35-55",
           "主类目未放最前: 期望 凉拖鞋"
         ],
-        "elapsedMs": 404
+        "elapsedMs": 344
       },
       {
         "ok": true,
@@ -1806,7 +1722,7 @@
           "字数 17 不在 35-55",
           "主类目未放最前: 期望 高跟鞋"
         ],
-        "elapsedMs": 385
+        "elapsedMs": 333
       },
       {
         "ok": true,
@@ -1820,7 +1736,7 @@
           "字数 20 不在 35-55",
           "主类目未放最前: 期望 豆豆小皮鞋"
         ],
-        "elapsedMs": 441
+        "elapsedMs": 346
       },
       {
         "ok": true,
@@ -1834,7 +1750,7 @@
           "字数 20 不在 35-55",
           "缺少主类目: 一字凉拖鞋"
         ],
-        "elapsedMs": 426
+        "elapsedMs": 361
       },
       {
         "ok": true,
@@ -1848,7 +1764,7 @@
           "字数 20 不在 35-55",
           "缺少主类目: 鱼嘴高跟拖鞋"
         ],
-        "elapsedMs": 410
+        "elapsedMs": 354
       },
       {
         "ok": true,
@@ -1862,236 +1778,20 @@
           "字数 20 不在 35-55",
           "主类目未放最前: 期望 坡跟鱼嘴厚底铆钉凉鞋"
         ],
-        "elapsedMs": 413
+        "elapsedMs": 340
       },
       {
         "ok": true,
         "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "rawOutput": "平底拖鞋女欧美流苏沙灘鞋夏季穿搭",
-        "cleaned": "平底拖鞋女欧美流苏沙灘鞋夏季穿搭",
+        "rawOutput": "平底拖鞋女欧美流苏沙灘鞋夏季穿搭舒適",
+        "cleaned": "平底拖鞋女欧美流苏沙灘鞋夏季穿搭舒適",
         "score": 70,
         "hardPass": false,
-        "count": 16,
+        "count": 18,
         "reasons": [
-          "字数 16 不在 35-55"
+          "字数 18 不在 35-55"
         ],
-        "elapsedMs": 387
-      }
-    ],
-    "nvidia/riva-translate-4b-instruct-v2": [
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "rawOutput": "The original title (with the size interference removed): Women's shoes, vintage round head Mary Jane single shoes, spring and autumn new design, woven, perforated, breathable, cool shoes.",
-        "cleaned": "The original title with the size interference removed Women s shoes vintage round head Mary Jane single shoes spring and autumn new design woven perforated breathable cool shoes",
-        "score": 9,
-        "hardPass": false,
-        "count": 150,
-        "reasons": [
-          "字数 150 不在 35-55",
-          "缺少主类目: 玛丽珍单鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 759
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "rawOutput": "The original title (with the size information removed): Women's shoes with a pointed toe, low-cut, butterfly strap, Mary Jane, flat, comfortable, and chunky.",
-        "cleaned": "The original title with the size information removed Women s shoes with a pointed toe low cut butterfly strap Mary Jane flat comfortable and chunky",
-        "score": 9,
-        "hardPass": false,
-        "count": 123,
-        "reasons": [
-          "字数 123 不在 35-55",
-          "缺少主类目: 玛丽珍单鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 644
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "rawOutput": "The original title (with the size information removed): Women's shoes with toe straps, character slippers, summer outdoor wear, candy-colored, simple, casual, beach slippers",
-        "cleaned": "The original title with the size information removed Women s shoes with toe straps character slippers summer outdoor wear candy colored simple casual beach slippers",
-        "score": 9,
-        "hardPass": false,
-        "count": 140,
-        "reasons": [
-          "字数 140 不在 35-55",
-          "缺少主类目: 人字拖鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 657
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "rawOutput": "The original title (with the size information removed): Women's shoes, French wave point high heels, 2026 new summer fashion, thin heels, one-line strap, cool shoes",
-        "cleaned": "The original title with the size information removed Women s shoes French wave point high heels 2026 new summer fashion thin heels one line strap cool shoes",
-        "score": 0,
-        "hardPass": false,
-        "count": 130,
-        "reasons": [
-          "字数 130 不在 35-55",
-          "含禁用词或格式: 年份",
-          "缺少主类目: 一字带凉鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 686
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "rawOutput": "The original title (with size interference removed): Women's shoes, woven, thick heels, summer, casual, fashionable, versatile, with skirts, sandals",
-        "cleaned": "The original title with size interference removed Women s shoes woven thick heels summer casual fashionable versatile with skirts sandals",
-        "score": 9,
-        "hardPass": false,
-        "count": 118,
-        "reasons": [
-          "字数 118 不在 35-55",
-          "缺少主类目: 凉拖鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 612
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "rawOutput": "The original title (with the size interference removed): Women's shoes, retro, gentle, dotted, single shoes, women's flat shoes, comfortable, shallow, one-step, bean shoes",
-        "cleaned": "The original title with the size interference removed Women s shoes retro gentle dotted single shoes women s flat shoes comfortable shallow one step bean shoes",
-        "score": 9,
-        "hardPass": false,
-        "count": 134,
-        "reasons": [
-          "字数 134 不在 35-55",
-          "缺少主类目: 豆豆鞋",
-          "核心属性保留偏少: 0/7",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 687
-      },
-      {
-        "ok": true,
-        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "rawOutput": "The original title (with the size information removed): Women's shoes, vintage woven flat sandals, summer new fashion, holiday, character sandals",
-        "cleaned": "The original title with the size information removed Women s shoes vintage woven flat sandals summer new fashion holiday character sandals",
-        "score": 9,
-        "hardPass": false,
-        "count": 118,
-        "reasons": [
-          "字数 118 不在 35-55",
-          "缺少主类目: 凉拖鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 570
-      },
-      {
-        "ok": true,
-        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
-        "rawOutput": "The original title (with the size interference removed): 2026 New Spring and Autumn European Fashion Sexy Pointed Toe Single Shoes Full-Price Cross-Border Narrow Heel High Heels for Women",
-        "cleaned": "The original title with the size interference removed 2026 New Spring and Autumn European Fashion Sexy Pointed Toe Single Shoes Full Price Cross Border Narrow Heel High Heels for Women",
-        "score": 0,
-        "hardPass": false,
-        "count": 155,
-        "reasons": [
-          "字数 155 不在 35-55",
-          "含禁用词或格式: 年份",
-          "缺少主类目: 高跟鞋",
-          "核心属性保留偏少: 0/7",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 783
-      },
-      {
-        "ok": true,
-        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "rawOutput": "The original title (with the size information removed): European and American cross-border single shoes for women, simple and retro style for spring and summer 2026, new pure color bean-shaped leather shoes",
-        "cleaned": "The original title with the size information removed European and American cross border single shoes for women simple and retro style for spring and summer 2026 new pure color bean shaped leather shoes",
-        "score": 0,
-        "hardPass": false,
-        "count": 169,
-        "reasons": [
-          "字数 169 不在 35-55",
-          "含禁用词或格式: 年份",
-          "缺少主类目: 豆豆小皮鞋",
-          "核心属性保留偏少: 0/4",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 712
-      },
-      {
-        "ok": true,
-        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "rawOutput": "The original title (with the size interference removed): ZA Summer New 2026 Foreign Thick Bottom Women's Shoes Round Head Water Pearl Decoration Carved Open Stitching Fashion Single-String Slippers",
-        "cleaned": "The original title with the size interference removed ZA Summer New 2026 Foreign Thick Bottom Women s Shoes Round Head Water Pearl Decoration Carved Open Stitching Fashion Single String Slippers",
-        "score": 0,
-        "hardPass": false,
-        "count": 165,
-        "reasons": [
-          "字数 165 不在 35-55",
-          "含禁用词或格式: 年份 跨境外贸渠道词",
-          "缺少主类目: 一字凉拖鞋",
-          "核心属性保留偏少: 0/7",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 750
-      },
-      {
-        "ok": true,
-        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "rawOutput": "The original title (with the size interference removed): 2026 summer cross-border metal buckle beach sandals, human-shaped sandals, thick heels, foreign trade fish mouth high heels, women",
-        "cleaned": "The original title with the size interference removed 2026 summer cross border metal buckle beach sandals human shaped sandals thick heels foreign trade fish mouth high heels women",
-        "score": 0,
-        "hardPass": false,
-        "count": 153,
-        "reasons": [
-          "字数 153 不在 35-55",
-          "含禁用词或格式: 年份",
-          "缺少主类目: 鱼嘴高跟拖鞋",
-          "核心属性保留偏少: 0/6",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 708
-      },
-      {
-        "ok": true,
-        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "rawOutput": "The original title (with the size information removed): European and American cross-border direct supply of new women's wedge heels with fish mouth, thick soles, and rivets.",
-        "cleaned": "The original title with the size information removed European and American cross border direct supply of new women s wedge heels with fish mouth thick soles and rivets",
-        "score": 9,
-        "hardPass": false,
-        "count": 140,
-        "reasons": [
-          "字数 140 不在 35-55",
-          "缺少主类目: 坡跟鱼嘴厚底铆钉凉鞋",
-          "核心属性保留偏少: 0/4",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 645
-      },
-      {
-        "ok": true,
-        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "rawOutput": "The original title (with size interference removed): Cross-border foreign trade flat sandals for women 2024 summer new European embroidery beach shoes wish",
-        "cleaned": "The original title with size interference removed Cross border foreign trade flat sandals for women 2024 summer new European embroidery beach shoes wish",
-        "score": 0,
-        "hardPass": false,
-        "count": 130,
-        "reasons": [
-          "字数 130 不在 35-55",
-          "含禁用词或格式: 年份 跨境外贸渠道词",
-          "缺少主类目: 平底拖鞋",
-          "核心属性保留偏少: 0/4",
-          "原始输出含标点"
-        ],
-        "elapsedMs": 621
+        "elapsedMs": 906
       }
     ],
     "nvidia/nemotron-3.5-lightning-30b-a3b": [
@@ -2106,7 +1806,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 969
+        "elapsedMs": 934
       },
       {
         "ok": true,
@@ -2119,7 +1819,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1664
+        "elapsedMs": 917
       },
       {
         "ok": true,
@@ -2132,7 +1832,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 844
+        "elapsedMs": 960
       },
       {
         "ok": true,
@@ -2145,7 +1845,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1054
+        "elapsedMs": 1991
       },
       {
         "ok": true,
@@ -2158,7 +1858,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 656
+        "elapsedMs": 812
       },
       {
         "ok": true,
@@ -2171,7 +1871,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 842
+        "elapsedMs": 894
       },
       {
         "ok": true,
@@ -2184,7 +1884,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 697
+        "elapsedMs": 1030
       },
       {
         "ok": true,
@@ -2197,7 +1897,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 669
+        "elapsedMs": 820
       },
       {
         "ok": true,
@@ -2210,7 +1910,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 614
+        "elapsedMs": 936
       },
       {
         "ok": true,
@@ -2223,7 +1923,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 864
+        "elapsedMs": 1070
       },
       {
         "ok": true,
@@ -2236,7 +1936,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 794
+        "elapsedMs": 707
       },
       {
         "ok": true,
@@ -2249,7 +1949,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 805
+        "elapsedMs": 957
       },
       {
         "ok": true,
@@ -2262,7 +1962,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1263
+        "elapsedMs": 772
       }
     ],
     "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": [
@@ -2277,7 +1977,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1478
+        "elapsedMs": 1306
       },
       {
         "ok": true,
@@ -2290,7 +1990,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1184
+        "elapsedMs": 1019
       },
       {
         "ok": true,
@@ -2303,7 +2003,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1019
+        "elapsedMs": 1233
       },
       {
         "ok": true,
@@ -2316,7 +2016,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1376
+        "elapsedMs": 1284
       },
       {
         "ok": true,
@@ -2329,7 +2029,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1217
+        "elapsedMs": 1847
       },
       {
         "ok": true,
@@ -2342,7 +2042,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 2816
+        "elapsedMs": 1666
       },
       {
         "ok": true,
@@ -2355,7 +2055,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1984
+        "elapsedMs": 1136
       },
       {
         "ok": true,
@@ -2368,7 +2068,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1529
+        "elapsedMs": 1477
       },
       {
         "ok": true,
@@ -2381,7 +2081,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1503
+        "elapsedMs": 1015
       },
       {
         "ok": true,
@@ -2394,7 +2094,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1186
+        "elapsedMs": 1203
       },
       {
         "ok": true,
@@ -2407,7 +2107,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1684
+        "elapsedMs": 996
       },
       {
         "ok": true,
@@ -2420,7 +2120,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1071
+        "elapsedMs": 982
       },
       {
         "ok": true,
@@ -2433,7 +2133,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1596
+        "elapsedMs": 1327
       }
     ],
     "nvidia/nemotron-3-ultra-550b-a55b": [
@@ -2448,7 +2148,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 2439
+        "elapsedMs": 1902
       },
       {
         "ok": true,
@@ -2461,7 +2161,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 3714
+        "elapsedMs": 3938
       },
       {
         "ok": true,
@@ -2474,7 +2174,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 3937
+        "elapsedMs": 2781
       },
       {
         "ok": true,
@@ -2487,7 +2187,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 3114
+        "elapsedMs": 1774
       },
       {
         "ok": true,
@@ -2500,7 +2200,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 2118
+        "elapsedMs": 1780
       },
       {
         "ok": true,
@@ -2513,7 +2213,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1441
+        "elapsedMs": 3415
       },
       {
         "ok": true,
@@ -2526,7 +2226,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 2921
+        "elapsedMs": 6887
       },
       {
         "ok": true,
@@ -2539,7 +2239,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 3395
+        "elapsedMs": 2121
       },
       {
         "ok": true,
@@ -2552,7 +2252,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 2446
+        "elapsedMs": 3639
       },
       {
         "ok": true,
@@ -2565,7 +2265,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 7492
+        "elapsedMs": 3708
       },
       {
         "ok": true,
@@ -2578,7 +2278,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1356
+        "elapsedMs": 5505
       },
       {
         "ok": true,
@@ -2591,7 +2291,7 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 1613
+        "elapsedMs": 2619
       },
       {
         "ok": true,
@@ -2604,79 +2304,55 @@
         "reasons": [
           "空输出"
         ],
-        "elapsedMs": 5947
+        "elapsedMs": 2615
       }
     ],
-    "minimaxai/minimax-m3.1-flash": [
+    "nvidia/riva-translate-4b-instruct-v2": [
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 10690
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 3919
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 3517
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 3875
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "error": "HTTP 429: {\"status\":429,\"title\":\"Too Many Requests\"}",
-        "errorCode": "http_429"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "error": "HTTP 429: {\"status\":429,\"title\":\"Too Many Requests\"}",
-        "errorCode": "http_429"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "error": "HTTP 429: {\"status\":429,\"title\":\"Too Many Requests\"}",
-        "errorCode": "http_429"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
@@ -2725,20 +2401,163 @@
       {
         "ok": false,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "error": "HTTP 404: {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function 'd64c848d-0a4b-400a-b780-75d603c6bc3a': Not found for account 'qKCjsb6OfbbC9DW-3FTQPEZ6EXEv5fJB_etZ1QxF1Is'\"}",
-        "errorCode": "http_404"
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
         "ok": false,
         "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "error": "HTTP 404: {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function 'd64c848d-0a4b-400a-b780-75d603c6bc3a': Not found for account 'qKCjsb6OfbbC9DW-3FTQPEZ6EXEv5fJB_etZ1QxF1Is'\"}",
-        "errorCode": "http_404"
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
+      },
+      {
+        "ok": true,
+        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 13136
+      },
+      {
+        "ok": true,
+        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 7331
+      },
+      {
+        "ok": true,
+        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 14282
+      },
+      {
+        "ok": true,
+        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 4486
+      },
+      {
+        "ok": true,
+        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 3798
+      },
+      {
+        "ok": true,
+        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 4063
+      },
+      {
+        "ok": true,
+        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 3591
+      },
+      {
+        "ok": true,
+        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 7135
+      },
+      {
+        "ok": true,
+        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
+        "rawOutput": "",
+        "cleaned": "",
+        "score": 0,
+        "hardPass": false,
+        "count": 0,
+        "reasons": [
+          "空输出"
+        ],
+        "elapsedMs": 14210
+      },
+      {
+        "ok": false,
+        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
+      },
+      {
+        "ok": false,
+        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
+      }
+    ],
+    "minimaxai/minimax-m3.1-flash": [
+      {
+        "ok": false,
+        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
+      },
+      {
+        "ok": false,
+        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
         "ok": false,
         "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "error": "HTTP 404: {\"status\":404,\"title\":\"Not Found\",\"detail\":\"Function 'd64c848d-0a4b-400a-b780-75d603c6bc3a': Not found for account 'qKCjsb6OfbbC9DW-3FTQPEZ6EXEv5fJB_etZ1QxF1Is'\"}",
-        "errorCode": "http_404"
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
         "ok": false,
@@ -2811,7 +2630,7 @@
         "errorCode": "skipped"
       }
     ],
-    "deepseek-ai/deepseek-v4.1-flash": [
+    "moonshotai/kimi-k3.1-pro": [
       {
         "ok": false,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
@@ -2991,431 +2810,94 @@
         "errorCode": "skipped"
       }
     ],
-    "openai/gpt-oss-20b": [
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      }
-    ],
-    "nvidia/nemotron-parse": [
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      }
-    ],
-    "nvidia/nemotron-parse-2.0": [
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse-2.0' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse-2.0' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "error": "HTTP 410: {\"type\":\"about:blank\",\"title\":\"Gone\",\"status\":410,\"detail\":\"The model 'nvidia/nemotron-parse-2.0' has reached its end of life on 2026-11-16T09:00:00Z and is no longer available.\"}\n",
-        "errorCode": "http_410"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      },
-      {
-        "ok": false,
-        "skipped": true,
-        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "error": "Skipped after 3 consecutive request failures",
-        "errorCode": "skipped"
-      }
-    ],
     "mistralai/mistral-large-4-1t-a52b": [
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 5545
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 3844
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 2045
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 1751
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 1589
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 2987
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 8343
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 1552
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 5628
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 1473
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
-        "ok": true,
+        "ok": false,
+        "skipped": true,
         "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 1453
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       }
     ],
     "google/gemma-3-12b-it": [
@@ -3688,19 +3170,102 @@
         "errorCode": "skipped"
       }
     ],
+    "fastino/gliner2-pii": [
+      {
+        "ok": false,
+        "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
+        "error": "HTTP 422: {\"error\":{\"message\":\"invalid extraction request; check model, messages, labels and parameters\"}}",
+        "errorCode": "http_422"
+      },
+      {
+        "ok": false,
+        "rawTitle": "35-43码 大码女鞋方头浅口蝴蝶结玛丽珍单鞋女外穿平底舒适豆豆鞋",
+        "error": "HTTP 422: {\"error\":{\"message\":\"invalid extraction request; check model, messages, labels and parameters\"}}",
+        "errorCode": "http_422"
+      },
+      {
+        "ok": false,
+        "rawTitle": "35-43码 大码女鞋41夹脚人字拖鞋女夏外穿糖果色简约休闲沙滩凉拖",
+        "error": "HTTP 422: {\"error\":{\"message\":\"invalid extraction request; check model, messages, labels and parameters\"}}",
+        "errorCode": "http_422"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "35-43码 大码女鞋编织粗跟凉拖鞋女夏季外穿时尚百搭配裙子凉鞋41",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "35-43码 大码女鞋复古温柔波点单鞋女平底舒适浅口一脚蹬豆豆鞋53",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "35-43码 大码女鞋复古编织平底凉拖鞋女夏季新款时尚度假人字拖42",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "2026新款春秋欧美风性感尖头女单鞋现货跨境大码满钉细跟高跟鞋女",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "欧美跨境大码单鞋女简约复古风春夏季2026新款纯色大码豆豆小皮鞋",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "ZA夏季新品2026外贸厚底女鞋圆头水钻饰镂空拼接时尚一字凉拖鞋女",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "2026夏季跨境金属扣沙滩凉拖鞋人字拖粗跟外贸大码鱼嘴高跟拖鞋女",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "欧美跨境直供外贸大码43wish新款女士坡跟鱼嘴厚底铆钉凉鞋",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      },
+      {
+        "ok": false,
+        "skipped": true,
+        "rawTitle": "跨境外贸大码平底拖鞋女2024年夏季新款欧美流苏沙滩女鞋43码wish",
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
+      }
+    ],
     "meta/muse-glimmer-30b": [
       {
-        "ok": true,
+        "ok": false,
         "rawTitle": "35-43码 大码女鞋复古圆头玛丽珍单鞋女春秋新款编织镂空透气凉鞋",
-        "rawOutput": "",
-        "cleaned": "",
-        "score": 0,
-        "hardPass": false,
-        "count": 0,
-        "reasons": [
-          "空输出"
-        ],
-        "elapsedMs": 13639
+        "error": "TIMEOUT after 15000ms",
+        "errorCode": "timeout"
       },
       {
         "ok": false,
@@ -3716,9 +3281,10 @@
       },
       {
         "ok": false,
+        "skipped": true,
         "rawTitle": "35-43码 大码女鞋法式波点高跟鞋2026新款夏季网红细跟一字带凉鞋",
-        "error": "TIMEOUT after 15000ms",
-        "errorCode": "timeout"
+        "error": "Skipped after 3 consecutive request failures",
+        "errorCode": "skipped"
       },
       {
         "ok": false,
